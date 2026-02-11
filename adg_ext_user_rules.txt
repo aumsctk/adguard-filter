@@ -231,3 +231,17 @@ mangaisekaithai.com##.ad
 
 ! (เสริม) ป้องกันการโหลดรูปภาพจากเซิร์ฟเวอร์โฆษณาที่เว็บนี้ใช้
 ||image.cdend.com^$domain=mangaisekaithai.com
+
+! ซ่อนกล่องรวมโฆษณาด้านบน (Header Ads Section)
+slow-manga.com##.header-ads-section
+
+! บล็อกลิงก์โฆษณาเว็บพนันที่ใช้ ibit.ly และโดเมนอื่นๆ ที่พบในโค้ด
+slow-manga.com##a[href*="ibit.ly"]
+slow-manga.com##a[href*="8xbet"]
+slow-manga.com##a[href*="lalika"]
+slow-manga.com##a[href*="sexy365bet"]
+slow-manga.com##a[href*="mahagame66"]
+slow-manga.com##a[href*="ufazeed"]
+
+! ซ่อนรูปภาพแบนเนอร์โฆษณาตามขนาด (เผื่อคลาสเปลี่ยน)
+slow-manga.com##img[src*="728x200"]
