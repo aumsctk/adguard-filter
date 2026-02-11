@@ -219,3 +219,15 @@ animeruka.com##.code-block-default
 animeruka.com##.module_home_x:has(#animerukaads1)
 animeruka.com##center:has(#animerukaads4)
 animeruka.com##center:has(#animerukaads5)
+
+! --- MangaIsekaiThai Rules ---
+! ลบกล่องรวมโฆษณาเว็บพนันด้านบน (ใต้เมนู)
+mangaisekaithai.com##.ads
+
+! ลบโฆษณาที่ส่วนท้ายเว็บไซต์ (Footer)
+mangaisekaithai.com##.footer-ads
+mangaisekaithai.com##.c-ads
+mangaisekaithai.com##.ad
+
+! (เสริม) ป้องกันการโหลดรูปภาพจากเซิร์ฟเวอร์โฆษณาที่เว็บนี้ใช้
+||image.cdend.com^$domain=mangaisekaithai.com
