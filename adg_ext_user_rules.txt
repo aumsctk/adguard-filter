@@ -194,3 +194,18 @@ cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
 
+! --- กฎสำหรับ Ped-Manga.com โดยเฉพาะ ---
+
+! ลบโฆษณาลอยด้านข้าง (ซ้าย/ขวา) และด้านล่าง (Floating Banners)
+ped-manga.com##.wbnn
+ped-manga.com###wbnn
+
+! ลบตารางรวมแบนเนอร์เว็บพนันขนาดใหญ่กลางหน้าเว็บ (Gambling Grid)
+ped-manga.com##.dessert-frame
+
+! ลบลิงก์โฆษณา/เว็บโป๊/เว็บพนัน ตรงส่วนท้ายเว็บ (Footer Menu)
+ped-manga.com##ul#menu-q
+ped-manga.com##.footermenu .menu-q-container
+
+! ลบแบนเนอร์ Clickbait หรือกล่องเปล่าที่อาจแฝงโฆษณา
+ped-manga.com##div[style*="z-index:999999"]
