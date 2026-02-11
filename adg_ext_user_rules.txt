@@ -194,4 +194,28 @@ cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
 
+! --- กฎสำหรับ Animeruka.com ---
 
+! ลบกล่องโฆษณาหลักที่แทรกตามจุดต่างๆ (บน, กลาง, ล่าง)
+animeruka.com###animerukaads1
+animeruka.com###animerukaads2
+animeruka.com###animerukaads3
+animeruka.com###animerukaads4
+animeruka.com###animerukaads5
+
+! ลบโฆษณาแบบลอย (Sticky Ads) ที่อยู่ด้านล่างและด้านข้าง
+animeruka.com###box-footer-fix
+animeruka.com###box-side-l
+animeruka.com###box-side-r
+
+! ลบรูปภาพแบนเนอร์โฆษณาโดยตรง (Class ที่เว็บใช้สำหรับรูปโฆษณา)
+animeruka.com##.animeruka-banner
+
+! ลบกล่อง Code Block ที่ถูกใช้แทรกสคริปต์โฆษณา
+animeruka.com##.code-block
+animeruka.com##.code-block-default
+
+! ลบพื้นที่ว่างที่อาจเหลืออยู่จากการซ่อนโฆษณา
+animeruka.com##.module_home_x:has(#animerukaads1)
+animeruka.com##center:has(#animerukaads4)
+animeruka.com##center:has(#animerukaads5)
