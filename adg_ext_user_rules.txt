@@ -288,6 +288,8 @@ reborntrans.com###manga_eagle_ad_widget-21
 reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
+
+! ซ่อนโฆษณาในหน้าอ่านมังงะ ซ้าย ขวา ล่าง
 reborntrans.com###wbnn-bottom
 reborntrans.com###wbnn-left
 reborntrans.com###wbnn-right
