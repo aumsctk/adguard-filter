@@ -26,6 +26,8 @@ goseries4k.com##.list-ads
 goseries4k.com###pm-dessert
 goseries4k.com##.vipx-item--floating
 
+
+
 ! 3. ลบเลเยอร์ซ่อนที่อาจดักจับการคลิก (Clickjacking) บนตัวเล่น
 goseries4k.com##.action-hide
 
