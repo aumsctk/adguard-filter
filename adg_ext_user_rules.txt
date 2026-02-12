@@ -288,3 +288,6 @@ reborntrans.com###manga_eagle_ad_widget-21
 reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
+reborntrans.com###wbnn-bottom
+reborntrans.com###wbnn-left
+reborntrans.com###wbnn-right
