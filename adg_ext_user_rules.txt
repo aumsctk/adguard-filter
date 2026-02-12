@@ -293,3 +293,21 @@ reborntrans.com###manga_eagle_ad_widget-35
 reborntrans.com###wbnn-bottom
 reborntrans.com###wbnn-left
 reborntrans.com###wbnn-right
+
+! --- กฎสำหรับ speed-manga.net ---
+
+! ลบกลุ่มแบนเนอร์โฆษณาขนาดใหญ่ด้านบน (GIF พนันต่างๆ)
+speed-manga.net##.dessert-frame
+speed-manga.net##.blox.mlb.kln
+
+! ลบโฆษณาแบบลอย (Floating Ads) ที่ติดขอบจอ ล่าง/ซ้าย/ขวา
+speed-manga.net##.tt_bfx
+speed-manga.net##.tt_bfxl
+speed-manga.net##.tt_bfxr
+speed-manga.net##.tt_bfxb
+
+! ลบโฆษณาลอยด้านล่างที่มีปุ่มปิด (ระบุจาก ID ในโค้ดปัจจุบัน)
+speed-manga.net###i8cqsek3wi7
+
+! ลบพื้นที่ว่างที่อาจเหลืออยู่จากการซ่อนโฆษณา
+speed-manga.net##.mlb
