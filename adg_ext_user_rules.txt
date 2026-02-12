@@ -259,3 +259,32 @@ xn--l3c0azab5a2gta.com##.ads
 ! 3. (เสริม) ซ่อนส่วน Facebook Widget ที่อาจหน่วงเว็บ
 xn--l3c0azab5a2gta.com##.fb_iframe_widget
 xn--l3c0azab5a2gta.com##div#fb-root
+
+
+! ซ่อน Widget โฆษณาทั้งหมดที่มีคลาส manga-eagle-ad-widget-instance
+reborntrans.com##.manga-eagle-ad-widget-instance
+
+! ซ่อนพื้นที่โฆษณาด้านบน (Header Area)
+reborntrans.com##.widget-header-area
+
+! ซ่อนการ์ดโฆษณาที่แทรกอยู่ในเนื้อหา
+reborntrans.com##.manga-eagle-ad-card
+
+! ซ่อนโฆษณาในหน้าอ่านมังงะ (Single Page Widget)
+reborntrans.com##.manga-single-widget-ads-1
+
+! (เสริม) หากต้องการบล็อกเจาะจง ID ตามที่พบในไฟล์
+reborntrans.com###manga_eagle_ad_widget-3
+reborntrans.com###manga_eagle_ad_widget-4
+reborntrans.com###manga_eagle_ad_widget-5
+reborntrans.com###manga_eagle_ad_widget-6
+reborntrans.com###manga_eagle_ad_widget-8
+reborntrans.com###manga_eagle_ad_widget-9
+reborntrans.com###manga_eagle_ad_widget-15
+reborntrans.com###manga_eagle_ad_widget-16
+reborntrans.com###manga_eagle_ad_widget-17
+reborntrans.com###manga_eagle_ad_widget-19
+reborntrans.com###manga_eagle_ad_widget-21
+reborntrans.com###manga_eagle_ad_widget-22
+reborntrans.com###manga_eagle_ad_widget-30
+reborntrans.com###manga_eagle_ad_widget-35
