@@ -333,3 +333,20 @@ sing-manga.com##a[href*="1stgame"]
 sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
 
 
+! --- Liquipedia VALORANT Ad Blocking Rules ---
+
+! 1. ลบพื้นที่โฆษณาส่วนหัว (Top Banner)
+liquipedia.net###top-ad
+
+! 2. ลบพื้นที่โฆษณาแถบด้านข้าง (Sidebar)
+liquipedia.net###sidebar-ad
+
+! 3. ลบโฆษณาที่แทรกอยู่ในกล่องข้อมูล (Infobox) และระหว่างเนื้อหา
+liquipedia.net##.content-ad-block
+liquipedia.net##.content-ad
+
+! 4. ลบปุ่ม Betting Preferences ที่ซ่อนอยู่ในเมนู Tools
+liquipedia.net##.dropdown-betting-ad-button
+
+! 5. ลบโฆษณา Google Publisher Tag (GPT) แบบกวาดล้าง (เผื่อมี ID อื่นหลุดรอด)
+liquipedia.net##div[id^="div-gpt-ad"]
