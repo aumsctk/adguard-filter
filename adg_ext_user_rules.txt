@@ -313,3 +313,23 @@ speed-manga.net###i8cqsek3wi7
 
 ! ลบพื้นที่ว่างที่อาจเหลืออยู่จากการซ่อนโฆษณา
 speed-manga.net##.mlb
+
+
+! --- กฎสำหรับ sing-manga.com ---
+
+! ซ่อนกล่องโฆษณาหลัก (ที่มีพวกแบนเนอร์เว็บพนัน)
+sing-manga.com##.ads
+
+! ซ่อนรูปภาพโฆษณาที่โหลดมาจาก image.cdend.com (ซึ่งเป็นโฮสต์รูปโฆษณาในเว็บนี้)
+sing-manga.com##img[src*="image.cdend.com"]
+
+! ซ่อนลิงก์ที่วิ่งไปหาเว็บพนัน (เผื่อมันหลุดจากกล่อง .ads)
+sing-manga.com##a[href*="ibit.ly"]
+sing-manga.com##a[href*="huaylike"]
+sing-manga.com##a[href*="lalikabet"]
+sing-manga.com##a[href*="1stgame"]
+
+! จัดการพื้นที่ว่างที่อาจเหลืออยู่
+sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
+
+
