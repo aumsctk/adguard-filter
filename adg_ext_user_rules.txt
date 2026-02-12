@@ -246,3 +246,16 @@ slow-manga.com##a[href*="ufazeed"]
 
 ! ซ่อนรูปภาพแบนเนอร์โฆษณาตามขนาด (เผื่อคลาสเปลี่ยน)
 slow-manga.com##img[src*="728x200"]
+
+
+! --- กฎสำหรับ สดในเมะ.com (xn--l3c0azab5a2gta.com) ---
+
+! 1. ซ่อนกล่องโฆษณาแบนเนอร์หลัก (ที่มีเว็บพนัน/หวย)
+xn--l3c0azab5a2gta.com##.ads
+
+! 2. บล็อกการโหลดรูปภาพจากเซิร์ฟเวอร์โฆษณา (cdend.com)
+||image.cdend.com^
+
+! 3. (เสริม) ซ่อนส่วน Facebook Widget ที่อาจหน่วงเว็บ
+xn--l3c0azab5a2gta.com##.fb_iframe_widget
+xn--l3c0azab5a2gta.com##div#fb-root
