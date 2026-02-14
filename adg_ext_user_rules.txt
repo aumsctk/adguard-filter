@@ -350,3 +350,19 @@ liquipedia.net##.dropdown-betting-ad-button
 
 ! 5. ลบโฆษณา Google Publisher Tag (GPT) แบบกวาดล้าง (เผื่อมี ID อื่นหลุดรอด)
 liquipedia.net##div[id^="div-gpt-ad"]
+
+
+! --- Ultimate UFANICE Link Blocker ---
+
+! 1. ลบกล่องลิงก์ทั้งหมด โดยจับจาก URL ปลายทาง (แม่นยำ 100%)
+##a[href*="cutt.ly/UFANICE"]
+
+! 2. ลบกล่องลิงก์ โดยจับจากคำว่า "UFANICE" ในชื่อรูปภาพ (กรณี URL เปลี่ยน)
+##a:has(img[src*="UFANICE"])
+
+! 3. ลบกล่องลิงก์ โดยจับจากป้ายกำกับ "AD" ที่มุมซ้ายบน (ใช้เป็นแผนสำรอง)
+##a:has(.absolute.top-2.left-2 > span:contains(AD))
+
+! 4. บล็อกการเชื่อมต่อกับ Link Shortener ของโฆษณานี้ (ป้องกันเผลอกด)
+||cutt.ly/UFANICE*^
+
