@@ -366,3 +366,27 @@ liquipedia.net##div[id^="div-gpt-ad"]
 ! 4. บล็อกการเชื่อมต่อกับ Link Shortener ของโฆษณานี้ (ป้องกันเผลอกด)
 ||cutt.ly/UFANICE*^
 
+! --- Black-Manga Ad Blocking Rules ---
+
+! 1. ลบแบนเนอร์โฆษณาที่แทรกอยู่ตามหน้าเว็บ (บน, กลาง, ล่าง)
+black-manga.com##.center_blackmangaza
+black-manga.com##.center_blackmanga
+black-manga.com##.center_blackmangasolo
+black-manga.com##.center_blackmangafixsize
+
+! 2. ลบโฆษณาแบบลอย (Sticky Ads) ที่ติดอยู่ขอบจอ (ล่าง, ซ้าย, ขวา)
+black-manga.com###sticky-bottom
+black-manga.com###sticky-bottom2
+black-manga.com###sticky-bottom3
+
+! 3. ลบ Class โฆษณาลอยสำหรับมุมมองบนมือถือ
+black-manga.com##.mobile-float-right
+black-manga.com##.mobile-float-left
+black-manga.com##.floating_content
+
+! 4. บล็อกลิงก์ Redirect ที่ส่งไปยังเว็บพนัน (เพื่อความปลอดภัยและประหยัดเน็ต)
+black-manga.com##a[href^="/link_to.php"]
+||ibit.ly^
+||debet.win^
+||regem.bet^
+
