@@ -390,3 +390,23 @@ black-manga.com##a[href^="/link_to.php"]
 ||debet.win^
 ||regem.bet^
 
+! --- Reapertrans Ad Blocking Rules ---
+
+! 1. ลบดงแบนเนอร์โฆษณาที่เรียงกันกลางหน้าเว็บ
+reapertrans.com##.sort-ban
+
+! 2. ลบโฆษณาแบบลอย (Floating/Sticky Ads) ที่เด้งบังจอเวลาอ่าน
+reapertrans.com##.ads-info
+reapertrans.com##.floating_content
+reapertrans.com###ads_02
+reapertrans.com###ads_03
+reapertrans.com###ads_04
+reapertrans.com###ads_05
+
+! 3. ลบเมนูสแปมและลิงก์เว็บ 18+ ที่แฝงมาในส่วนท้ายเว็บ
+reapertrans.com##.footermenu
+
+! 4. บล็อกการดึงรูปแบนเนอร์โฆษณาและลิงก์เว็บพนัน (ช่วยให้โหลดหน้ามังงะไวขึ้นมาก)
+||image.cdend.com^$domain=reapertrans.com
+||ibit.ly^$domain=reapertrans.com
+||t.ly^$domain=reapertrans.com
