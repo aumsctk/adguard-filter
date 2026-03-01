@@ -1,244 +1,123 @@
-! --- Go-Manga Clean Up Rules by Gemini ---
-! 1. ลบโฆษณาแบบ Banner ที่แทรกอยู่ตามจุดต่างๆ (บน/กลาง/ล่าง)
+! ===================================================================
+! ชุดรวมกฎกรองโฆษณาสำหรับเว็บมังงะและซีรีส์ไทย (Organized by Gemini)
+! ===================================================================
+
+! --- 1. กฎการบล็อกระดับเครือข่าย (Global & Tracking Network) ---
+! บล็อกเซิร์ฟเวอร์รูปภาพโฆษณาที่หลายเว็บใช้ร่วมกัน
+||image.cdend.com^
+! บล็อกตัวย่อลิงก์ที่มักพาไปเว็บพนัน
+||ibit.ly^
+||debet.win^
+||regem.bet^
+||cutt.ly/UFANICE*^
+
+! --- 2. กฎทั่วไปที่ใช้ได้ทุกเว็บ (Global Selectors) ---
+##a[href*="cutt.ly/UFANICE"]
+##a:has(img[src*="UFANICE"])
+##a:has(.absolute.top-2.left-2 > span:contains(AD))
+
+! ===================================================================
+! หมวดหมู่เว็บอ่านมังงะ (Manga Websites)
+! ===================================================================
+
+! --- Go-Manga ---
 go-manga.com##.center_gomanga
 go-manga.com##.center_gomangafixsize
 go-manga.com##.center_gomangasolo
 go-manga.com##.center_gomangaza
-
-! 2. ลบโฆษณาแบบลอย (Sticky) ที่บังหน้าจอด้านล่างและมุมจอ
 go-manga.com###sticky-bottom
 go-manga.com###sticky-bottom2
 go-manga.com###sticky-bottom3
-
-! 3. ลบภาพพื้นหลัง (Wallpaper) ที่เป็นโฆษณา และปรับพื้นหลังเป็นสีเรียบเพื่อให้สบายตา
 go-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
-
-! 4. ป้องกันการ Redirect ไปเว็บโฆษณาเมื่อเผลอคลิกพลาด
 ||go-manga.com/link_to.php^
 
-! --- Goseries4k Clean Up Rules by Gemini ---
-! 1. ลบโครงสร้างโฆษณาหลัก (vipx system) ทั้งแบนเนอร์บน ล่าง และด้านข้าง
-goseries4k.com##.vipx-grid
-goseries4k.com##.vipx-item
-goseries4k.com##.list-ads
+! --- Up-Manga ---
+up-manga.com##.center_upmanga
+up-manga.com##.center_upmanga3
+up-manga.com##.center_upmangaza
+up-manga.com##.center_upmangaza3
+up-manga.com##.center_upmangasolo
+up-manga.com##.center_upmangasolo3
+up-manga.com###sticky-bottom
+up-manga.com###sticky-bottom2
+up-manga.com###sticky-bottom3
+up-manga.com##div[id^="sticky-bottom"]
+up-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
+up-manga.com##a[href^="/link_to.php"]
+up-manga.com##a[href*="ibit.ly"]
+up-manga.com##a[href*="cutt.ly"]
+up-manga.com##a[href*="pgk44"]
+up-manga.com##a[href*="ufabet"]
+||up-manga.com/link_to.php^
 
-! 2. ลบโฆษณาวิดีโอแทรก (Preroll/Overlay) ที่บังตัวเล่นหนัง
-goseries4k.com###pm-dessert
-goseries4k.com##.vipx-item--floating
-
-
-
-! 3. ลบเลเยอร์ซ่อนที่อาจดักจับการคลิก (Clickjacking) บนตัวเล่น
-goseries4k.com##.action-hide
-
-! 4. ลบ Widget ด้านข้างขวา (Sidebar) ที่มักมีโฆษณาแฝง
-goseries4k.com##aside#rightbar
-
-! 5. ปรับพื้นหลังเว็บ ลบ Wallpaper โฆษณา และเปลี่ยนเป็นสีดำสบายตา
-goseries4k.com##body:style(background-image: none !important; background-color: #151515 !important;)
-
-! 6. ป้องกัน Script ตรวจจับ Adblock หรือเปิดหน้าต่างใหม่ (Pop-under)
-||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
-||goseries4k.com^$popup
-mangaisekaithai.com##div.wrap:first-child > div.body-wrap > div.ads.col-md-12.text-center.mt-2.mb-2:nth-child(3) > a:nth-child(5) 
-! --- AnimeRuka Clean Up Rules by Gemini ---
-! 1. ลบโฆษณาแบบ Banner ที่แทรกตามจุดต่างๆ ของหน้าเว็บ (Top, Mid, Bottom)
+! --- AnimeRuka ---
 animeruka.com###animerukaads1
+animeruka.com###animerukaads2
 animeruka.com###animerukaads3
 animeruka.com###animerukaads4
 animeruka.com###animerukaads5
 animeruka.com##.promo728
-
-! 2. ลบโฆษณาแบบลอย (Sticky) ที่บังหน้าจอด้านล่างและด้านข้าง
 animeruka.com###box-footer-fix
 animeruka.com###box-side-l
 animeruka.com###box-side-r
-
-! 3. ซ่อนพื้นที่ส่วนหัวเนื้อหาที่มักจะมีโฆษณาแทรก
+animeruka.com##.animeruka-banner
 animeruka.com##.module_home_x > center
-
-! 4. บล็อกรูปภาพโฆษณาทั้งหมดที่โหลดมาจากโฟลเดอร์โฆษณาของเว็บโดยตรง
+animeruka.com##.code-block
+animeruka.com##.code-block-default
+animeruka.com##.module_home_x:has(#animerukaads1)
+animeruka.com##center:has(#animerukaads4)
+animeruka.com##center:has(#animerukaads5)
 ||animeruka.com/ads/$image,domain=animeruka.com
-
-! 5. ป้องกันการทำงานของ Script แทรกโฆษณา (Ad Injection)
 ||animeruka.com^$script,contain=ai_insert
 
-! --- Up-Manga Clean Up Rules by Gemini ---
-! 1. ลบโฆษณาแบนเนอร์ (Banner) ที่แทรกอยู่ตามเนื้อหา (บน/กลาง/ล่าง)
-up-manga.com##.center_upmanga
-up-manga.com##.center_upmangaza
-up-manga.com##.center_upmangasolo
-
-! 2. ลบโฆษณาแบบลอย (Sticky) ที่บังหน้าจอด้านล่างและมุมจอซ้ายขวา
-up-manga.com###sticky-bottom
-up-manga.com###sticky-bottom2
-up-manga.com###sticky-bottom3
-
-! 3. ลบภาพพื้นหลัง (Wallpaper) ที่เป็นโฆษณา และเปลี่ยนเป็นสีพื้นเรียบๆ ให้อ่านสบายตา
-up-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
-
-! 4. บล็อกสคริปต์ส่งต่อ (Redirect) เพื่อป้องกันการเด้งไปเว็บพนันเมื่อเผลอคลิกพลาด
-||up-manga.com/link_to.php^
-
-! --- กฎสำหรับเว็บ 25-hd.com (สร้างจาก Source Code วันที่ 1 Feb 2026) ---
-
-! ลบแบนเนอร์โฆษณาชุดใหญ่ด้านบนสุด (UFA, Sexygame, Lotto ฯลฯ)
-25-hd.com##.main-banner
-
-! ลบแบนเนอร์โฆษณาที่ลอยด้านซ้าย-ขวา และด้านล่างจอ (Floating Ads)
-25-hd.com##.banner-f-left-1
-25-hd.com##.banner-f-right-1
-25-hd.com##.banner-float
-
-! ลบแบนเนอร์โฆษณาในแถบด้านข้าง (Sidebar) ทั้งซ้ายและขวา
-25-hd.com##.sidebar-banner-left
-25-hd.com##.sidebar-banner-right
-
-! ลบแบนเนอร์โฆษณาที่คั่นกลางเนื้อหา (เหนือและใต้ตัวเล่นหนัง)
-25-hd.com##.banner-content-center
-
-! ลบกล่องโฆษณาที่ซ้อนอยู่ในตัวเล่นวิดีโอ (Player Promo)
-25-hd.com##.player-promo-box
-
-! ปรับแต่งพื้นที่ว่างที่เหลือจากการลบโฆษณา (Optional)
-25-hd.com##.banner
-25-hd.com##.widget-left > .sidebar-banner-left
-25-hd.com##.widget-right > .sidebar-banner-right
-
-! --- กฎสำหรับเว็บ anime-masterx.com (Update 2026) ---
-
-! ลบแบนเนอร์โฆษณาแบบลอยที่มุมจอและแถบล่าง (Floating Banners)
+! --- Anime-MasterX ---
 anime-masterx.com##.banner-close
 anime-masterx.com##div[id="slider-b"]
-
-! ลบกลุ่มโฆษณาเว็บพนันขนาดใหญ่ด้านบนและแทรกในเนื้อหา
-! สังเกตว่าเว็บใช้ class 'img-responsive2' เฉพาะกับรูปโฆษณา
 anime-masterx.com##.img-responsive2
 anime-masterx.com##a:has(.img-responsive2)
-
-! ลบกล่อง Container ที่เอาไว้ใส่โฆษณาโดยเฉพาะ
 anime-masterx.com##p.center_lnwphp
-
-! ลบลิงก์โฆษณาที่กระจายอยู่ตามจุดต่างๆ (Backup Rules)
+anime-masterx.com##.col-md-12 > center > p
 anime-masterx.com##a[href*="ibit.ly"]
 anime-masterx.com##a[href*="cutt.ly"]
 anime-masterx.com##a[href*="ufabet"]
 anime-masterx.com##a[href*="sexygame"]
 anime-masterx.com##a[href*="pgk44"]
-
-! ปรับแต่งพื้นที่ว่างที่เหลือจากการลบ
-anime-masterx.com##.col-md-12 > center > p
-
-! --- ป้องกันหน้าเว็บเลื่อนเอง (Stop Auto-Scroll) ---
 anime-masterx.com#%#//scriptlet("abort-on-property-write", "document.documentElement.scrollTop")
 
-! --- กฎสำหรับเว็บ up-manga.com (Update 2026) ---
-
-! ลบโฆษณาแบบลอยที่ด้านล่างจอและมุมซ้าย-ขวา (Sticky Ads)
-up-manga.com##div[id^="sticky-bottom"]
-
-! ลบกลุ่มโฆษณาเว็บพนันที่แทรกอยู่กลางหน้าและก่อนเข้าเนื้อหา
-up-manga.com##.center_upmangaza3
-up-manga.com##.center_upmanga3
-up-manga.com##.center_upmangasolo3
-
-! ลบลิงก์โฆษณาที่ใช้ระบบ Redirect (เว็บนี้ใช้ /link_to.php เฉพาะกับโฆษณา)
-up-manga.com##a[href^="/link_to.php"]
-
-! ลบโฆษณาที่อาจหลุดรอดด้วยการดักจับ URL ปลายทาง
-up-manga.com##a[href*="ibit.ly"]
-up-manga.com##a[href*="cutt.ly"]
-up-manga.com##a[href*="pgk44"]
-up-manga.com##a[href*="ufabet"]
-
-! --- กฎสำหรับเว็บ mangasuper.com (Update 2026) ---
-
-! ลบโฆษณาแบบลอยที่ด้านล่างจอ (Sticky Ads) ทั้ง 3 ตัว
+! --- MangaSuper ---
 mangasuper.com##div[id^="sticky-ads-bottom"]
-
-! ลบ Widget ด้านขวา/บน ที่รวมป้ายโฆษณาเว็บพนันไว้เป็นก้อน (Block 9)
 mangasuper.com##div[id="block-9"]
-
-! ลบ Widget ที่ควบคุมโฆษณาลอย (Block 10)
 mangasuper.com##div[id="block-10"]
-
-! ลบลิงก์โฆษณาที่ใช้ระบบ Redirect (เว็บนี้ใช้ /link_to.php ส่งออกไปเว็บพนัน)
+mangasuper.com##.sticky-close
 mangasuper.com##a[href^="/link_to.php"]
-
-! ลบลิงก์โฆษณาที่ยิงตรงไปเว็บพนันยอดฮิต (กันพลาด)
 mangasuper.com##a[href*="ibit.ly"]
 mangasuper.com##a[href*="pokbet"]
 mangasuper.com##a[href*="debet"]
 
-! (เสริม) ป้องกันการเช็ค Adblock หรือ Pop-up ซ่อน
-mangasuper.com##.sticky-close
-
-! --- กฎสำหรับเว็บ cartoon-th.com (Update 2026) ---
-
-! ลบกลุ่มโฆษณาหลัก (Grid) และโฆษณาที่แทรกเหนือตัวอ่านการ์ตูน
-! เว็บนี้ใช้ class 'kln' ครอบโฆษณาแบนเนอร์แทบทั้งหมด
+! --- Cartoon-TH ---
 cartoon-th.com##.kln
 cartoon-th.com##.dessert-frame
-
-! ลบโฆษณาแบบลอยที่ด้านล่างจอ (Sticky Ads)
 cartoon-th.com##.tt_bfx
 cartoon-th.com##div[id="f5mofwww"]
-
-! ลบโฆษณาแบบลอยด้านข้าง (ถ้ามีโผล่มาตาม CSS)
 cartoon-th.com##.tt_bfxl
 cartoon-th.com##.tt_bfxr
 cartoon-th.com##.tt_bfxb
-
-! ลบลิงก์โฆษณาเว็บพนันเจาะจง (ป้องกันหลุด)
 cartoon-th.com##a[href*="88club"]
 cartoon-th.com##a[href*="sinbet"]
 cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
 
-! --- กฎสำหรับ Animeruka.com ---
-
-! ลบกล่องโฆษณาหลักที่แทรกตามจุดต่างๆ (บน, กลาง, ล่าง)
-animeruka.com###animerukaads1
-animeruka.com###animerukaads2
-animeruka.com###animerukaads3
-animeruka.com###animerukaads4
-animeruka.com###animerukaads5
-
-! ลบโฆษณาแบบลอย (Sticky Ads) ที่อยู่ด้านล่างและด้านข้าง
-animeruka.com###box-footer-fix
-animeruka.com###box-side-l
-animeruka.com###box-side-r
-
-! ลบรูปภาพแบนเนอร์โฆษณาโดยตรง (Class ที่เว็บใช้สำหรับรูปโฆษณา)
-animeruka.com##.animeruka-banner
-
-! ลบกล่อง Code Block ที่ถูกใช้แทรกสคริปต์โฆษณา
-animeruka.com##.code-block
-animeruka.com##.code-block-default
-
-! ลบพื้นที่ว่างที่อาจเหลืออยู่จากการซ่อนโฆษณา
-animeruka.com##.module_home_x:has(#animerukaads1)
-animeruka.com##center:has(#animerukaads4)
-animeruka.com##center:has(#animerukaads5)
-
-! --- MangaIsekaiThai Rules ---
-! ลบกล่องรวมโฆษณาเว็บพนันด้านบน (ใต้เมนู)
+! --- MangaIsekaiThai ---
 mangaisekaithai.com##.ads
-
-! ลบโฆษณาที่ส่วนท้ายเว็บไซต์ (Footer)
 mangaisekaithai.com##.footer-ads
 mangaisekaithai.com##.c-ads
 mangaisekaithai.com##.ad
+mangaisekaithai.com##div.wrap:first-child > div.body-wrap > div.ads.col-md-12.text-center.mt-2.mb-2:nth-child(3) > a:nth-child(5)
 
-! (เสริม) ป้องกันการโหลดรูปภาพจากเซิร์ฟเวอร์โฆษณาที่เว็บนี้ใช้
-||image.cdend.com^$domain=mangaisekaithai.com
-
-
-! ซ่อนกล่องรวมโฆษณาด้านบน (Header Ads Section)
+! --- Slow-Manga ---
 slow-manga.com##.header-ads-section
-
-! บล็อกลิงก์โฆษณาเว็บพนันที่ใช้ ibit.ly และโดเมนอื่นๆ ที่พบในโค้ด
+slow-manga.com##img[src*="728x200"]
 slow-manga.com##a[href*="ibit.ly"]
 slow-manga.com##a[href*="8xbet"]
 slow-manga.com##a[href*="lalika"]
@@ -246,36 +125,14 @@ slow-manga.com##a[href*="sexy365bet"]
 slow-manga.com##a[href*="mahagame66"]
 slow-manga.com##a[href*="ufazeed"]
 
-! ซ่อนรูปภาพแบนเนอร์โฆษณาตามขนาด (เผื่อคลาสเปลี่ยน)
-slow-manga.com##img[src*="728x200"]
-
-
-! --- กฎสำหรับ สดในเมะ.com (xn--l3c0azab5a2gta.com) ---
-
-! 1. ซ่อนกล่องโฆษณาแบนเนอร์หลัก (ที่มีเว็บพนัน/หวย)
-xn--l3c0azab5a2gta.com##.ads
-
-! 2. บล็อกการโหลดรูปภาพจากเซิร์ฟเวอร์โฆษณา (cdend.com)
-||image.cdend.com^
-
-! 3. (เสริม) ซ่อนส่วน Facebook Widget ที่อาจหน่วงเว็บ
-xn--l3c0azab5a2gta.com##.fb_iframe_widget
-xn--l3c0azab5a2gta.com##div#fb-root
-
-
-! ซ่อน Widget โฆษณาทั้งหมดที่มีคลาส manga-eagle-ad-widget-instance
+! --- RebornTrans ---
 reborntrans.com##.manga-eagle-ad-widget-instance
-
-! ซ่อนพื้นที่โฆษณาด้านบน (Header Area)
 reborntrans.com##.widget-header-area
-
-! ซ่อนการ์ดโฆษณาที่แทรกอยู่ในเนื้อหา
 reborntrans.com##.manga-eagle-ad-card
-
-! ซ่อนโฆษณาในหน้าอ่านมังงะ (Single Page Widget)
 reborntrans.com##.manga-single-widget-ads-1
-
-! (เสริม) หากต้องการบล็อกเจาะจง ID ตามที่พบในไฟล์
+reborntrans.com###wbnn-bottom
+reborntrans.com###wbnn-left
+reborntrans.com###wbnn-right
 reborntrans.com###manga_eagle_ad_widget-3
 reborntrans.com###manga_eagle_ad_widget-4
 reborntrans.com###manga_eagle_ad_widget-5
@@ -291,101 +148,81 @@ reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
 
-! ซ่อนโฆษณาในหน้าอ่านมังงะ ซ้าย ขวา ล่าง
-reborntrans.com###wbnn-bottom
-reborntrans.com###wbnn-left
-reborntrans.com###wbnn-right
-
-! --- กฎสำหรับ speed-manga.net ---
-
-! ลบกลุ่มแบนเนอร์โฆษณาขนาดใหญ่ด้านบน (GIF พนันต่างๆ)
+! --- Speed-Manga ---
 speed-manga.net##.dessert-frame
 speed-manga.net##.blox.mlb.kln
-
-! ลบโฆษณาแบบลอย (Floating Ads) ที่ติดขอบจอ ล่าง/ซ้าย/ขวา
 speed-manga.net##.tt_bfx
 speed-manga.net##.tt_bfxl
 speed-manga.net##.tt_bfxr
 speed-manga.net##.tt_bfxb
-
-! ลบโฆษณาลอยด้านล่างที่มีปุ่มปิด (ระบุจาก ID ในโค้ดปัจจุบัน)
 speed-manga.net###i8cqsek3wi7
-
-! ลบพื้นที่ว่างที่อาจเหลืออยู่จากการซ่อนโฆษณา
 speed-manga.net##.mlb
 
-
-! --- กฎสำหรับ sing-manga.com ---
-
-! ซ่อนกล่องโฆษณาหลัก (ที่มีพวกแบนเนอร์เว็บพนัน)
+! --- Sing-Manga ---
 sing-manga.com##.ads
-
-! ซ่อนรูปภาพโฆษณาที่โหลดมาจาก image.cdend.com (ซึ่งเป็นโฮสต์รูปโฆษณาในเว็บนี้)
+sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
 sing-manga.com##img[src*="image.cdend.com"]
-
-! ซ่อนลิงก์ที่วิ่งไปหาเว็บพนัน (เผื่อมันหลุดจากกล่อง .ads)
 sing-manga.com##a[href*="ibit.ly"]
 sing-manga.com##a[href*="huaylike"]
 sing-manga.com##a[href*="lalikabet"]
 sing-manga.com##a[href*="1stgame"]
 
-! จัดการพื้นที่ว่างที่อาจเหลืออยู่
-sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
-
-
-! --- Liquipedia VALORANT Ad Blocking Rules ---
-
-! 1. ลบพื้นที่โฆษณาส่วนหัว (Top Banner)
-liquipedia.net###top-ad
-
-! 2. ลบพื้นที่โฆษณาแถบด้านข้าง (Sidebar)
-liquipedia.net###sidebar-ad
-
-! 3. ลบโฆษณาที่แทรกอยู่ในกล่องข้อมูล (Infobox) และระหว่างเนื้อหา
-liquipedia.net##.content-ad-block
-liquipedia.net##.content-ad
-
-! 4. ลบปุ่ม Betting Preferences ที่ซ่อนอยู่ในเมนู Tools
-liquipedia.net##.dropdown-betting-ad-button
-
-! 5. ลบโฆษณา Google Publisher Tag (GPT) แบบกวาดล้าง (เผื่อมี ID อื่นหลุดรอด)
-liquipedia.net##div[id^="div-gpt-ad"]
-
-
-! --- Ultimate UFANICE Link Blocker ---
-
-! 1. ลบกล่องลิงก์ทั้งหมด โดยจับจาก URL ปลายทาง (แม่นยำ 100%)
-##a[href*="cutt.ly/UFANICE"]
-
-! 2. ลบกล่องลิงก์ โดยจับจากคำว่า "UFANICE" ในชื่อรูปภาพ (กรณี URL เปลี่ยน)
-##a:has(img[src*="UFANICE"])
-
-! 3. ลบกล่องลิงก์ โดยจับจากป้ายกำกับ "AD" ที่มุมซ้ายบน (ใช้เป็นแผนสำรอง)
-##a:has(.absolute.top-2.left-2 > span:contains(AD))
-
-! 4. บล็อกการเชื่อมต่อกับ Link Shortener ของโฆษณานี้ (ป้องกันเผลอกด)
-||cutt.ly/UFANICE*^
-
-! --- Black-Manga Ad Blocking Rules ---
-
-! 1. ลบแบนเนอร์โฆษณาที่แทรกอยู่ตามหน้าเว็บ (บน, กลาง, ล่าง)
+! --- Black-Manga ---
 black-manga.com##.center_blackmangaza
 black-manga.com##.center_blackmanga
 black-manga.com##.center_blackmangasolo
 black-manga.com##.center_blackmangafixsize
-
-! 2. ลบโฆษณาแบบลอย (Sticky Ads) ที่ติดอยู่ขอบจอ (ล่าง, ซ้าย, ขวา)
 black-manga.com###sticky-bottom
 black-manga.com###sticky-bottom2
 black-manga.com###sticky-bottom3
-
-! 3. ลบ Class โฆษณาลอยสำหรับมุมมองบนมือถือ
 black-manga.com##.mobile-float-right
 black-manga.com##.mobile-float-left
 black-manga.com##.floating_content
-
-! 4. บล็อกลิงก์ Redirect ที่ส่งไปยังเว็บพนัน (เพื่อความปลอดภัยและประหยัดเน็ต)
 black-manga.com##a[href^="/link_to.php"]
-||ibit.ly^
-||debet.win^
-||regem.bet^
+
+! --- ReaperTrans ---
+reapertrans.com##.sort-ban a
+reapertrans.com##a[href*="ibit.ly"]
+reapertrans.com##div[id^="ads_"]
+
+! ===================================================================
+! หมวดหมู่เว็บดูหนัง ซีรีส์ และอื่นๆ (Streaming & Misc)
+! ===================================================================
+
+! --- Goseries4k ---
+goseries4k.com##.vipx-grid
+goseries4k.com##.vipx-item
+goseries4k.com##.list-ads
+goseries4k.com###pm-dessert
+goseries4k.com##.vipx-item--floating
+goseries4k.com##.action-hide
+goseries4k.com##aside#rightbar
+goseries4k.com##body:style(background-image: none !important; background-color: #151515 !important;)
+||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
+||goseries4k.com^$popup
+
+! --- 25-HD ---
+25-hd.com##.main-banner
+25-hd.com##.banner-f-left-1
+25-hd.com##.banner-f-right-1
+25-hd.com##.banner-float
+25-hd.com##.sidebar-banner-left
+25-hd.com##.sidebar-banner-right
+25-hd.com##.banner-content-center
+25-hd.com##.player-promo-box
+25-hd.com##.banner
+25-hd.com##.widget-left > .sidebar-banner-left
+25-hd.com##.widget-right > .sidebar-banner-right
+
+! --- สดในเมะ (xn--l3c0azab5a2gta.com) ---
+xn--l3c0azab5a2gta.com##.ads
+xn--l3c0azab5a2gta.com##.fb_iframe_widget
+xn--l3c0azab5a2gta.com##div#fb-root
+
+! --- Liquipedia ---
+liquipedia.net###top-ad
+liquipedia.net###sidebar-ad
+liquipedia.net##.content-ad-block
+liquipedia.net##.content-ad
+liquipedia.net##.dropdown-betting-ad-button
+liquipedia.net##div[id^="div-gpt-ad"]
