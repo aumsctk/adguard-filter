@@ -1,17 +1,18 @@
 ! ===================================================================
-! ชุดรวมกฎกรองโฆษณาสำหรับเว็บมังงะและซีรีส์ไทย (Organized by Gemini)
+! 1. กฎการบล็อกระดับเครือข่าย (Global & Tracking Network)
 ! ===================================================================
-
-! --- 1. กฎการบล็อกระดับเครือข่าย (Global & Tracking Network) ---
 ! บล็อกเซิร์ฟเวอร์รูปภาพโฆษณาที่หลายเว็บใช้ร่วมกัน
 ||image.cdend.com^
+
 ! บล็อกตัวย่อลิงก์ที่มักพาไปเว็บพนัน
 ||ibit.ly^
 ||debet.win^
 ||regem.bet^
 ||cutt.ly/UFANICE*^
 
-! --- 2. กฎทั่วไปที่ใช้ได้ทุกเว็บ (Global Selectors) ---
+! ===================================================================
+! 2. กฎทั่วไปที่ใช้ได้ทุกเว็บ (Global Selectors)
+! ===================================================================
 ##a[href*="cutt.ly/UFANICE"]
 ##a:has(img[src*="UFANICE"])
 ##a:has(.absolute.top-2.left-2 > span:contains(AD))
@@ -185,6 +186,18 @@ reapertrans.com##.sort-ban a
 reapertrans.com##a[href*="ibit.ly"]
 reapertrans.com##div[id^="ads_"]
 
+! --- Nano-Manga ---
+! ซ่อนกล่องแบนเนอร์โฆษณาขนาดใหญ่และแบบลอย
+nano-manga.com###block-5
+nano-manga.com###block-6
+nano-manga.com###sticky-ads-bottom
+nano-manga.com###sticky-ads-bottom2
+nano-manga.com###sticky-ads-bottom3
+! ซ่อนองค์ประกอบที่เป็นลิงก์ออกไปยังโฆษณาทั้งหมด
+nano-manga.com##a[href^="/link_to.php?url="]
+! [ขั้นสูง] บล็อกการโหลดลิงก์โฆษณาในระดับ Network
+||nano-manga.com/link_to.php^
+
 ! ===================================================================
 ! หมวดหมู่เว็บดูหนัง ซีรีส์ และอื่นๆ (Streaming & Misc)
 ! ===================================================================
@@ -226,3 +239,14 @@ liquipedia.net##.content-ad-block
 liquipedia.net##.content-ad
 liquipedia.net##.dropdown-betting-ad-button
 liquipedia.net##div[id^="div-gpt-ad"]
+
+
+! --- บ้านมังกร.com (xn--12cl7cd0bo9gf0s.com) ---
+! 1. ซ่อนกล่องแบนเนอร์โฆษณาที่อยู่เหนือตัวเล่นวิดีโอ
+xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
+! 2. ซ่อนป้ายโฆษณาเว็บพนันแบบเจาะจง
+xn--12cl7cd0bo9gf0s.com##a[href*="ambmax.pro"]
+xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
+! 3. บล็อกการเชื่อมต่อกับเว็บปลายทางของโฆษณาโดยตรง
+||ambmax.pro^
+||superslot.asia^
