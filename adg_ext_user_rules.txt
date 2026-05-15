@@ -250,3 +250,11 @@ xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 ! 3. บล็อกการเชื่อมต่อกับเว็บปลายทางของโฆษณาโดยตรง
 ||ambmax.pro^
 ||superslot.asia^
+
+! --- 9nung.com ---
+! ซ่อนพื้นที่และกล่องแบนเนอร์โฆษณา (Cosmetic Rules)
+9nung.com##aside.adsnon-zone
+9nung.com##aside[aria-label="advertisement"]
+
+! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์ (Network Rules)
+||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
