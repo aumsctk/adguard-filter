@@ -258,3 +258,7 @@ xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 
 ! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์ (Network Rules)
 ||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
+
+rongyok.com##[id^="content-modal-overlay"]
+rongyok.com##[id^="loadingMessage"]
+rongyok.com##+js(set, isDisplayingContent, false)
