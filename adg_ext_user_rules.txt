@@ -259,6 +259,39 @@ xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 ! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์ (Network Rules)
 ||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
 
+! === kahirihome.com - Block Ads ===
+
+! บล็อก banner โฆษณาซ้าย-ขวา (popup ลอยข้างจอ)
+kahirihome.com##div#banner-left
+kahirihome.com##div#banner-right
+kahirihome.com##div.fixed-banner
+
+! บล็อก ad player (โฆษณาก่อนดูหนัง)
+kahirihome.com##div[id^="ad_player_"]
+kahirihome.com##div[id^="pre_ad_interstitial_ad_player_"]
+kahirihome.com##div[id^="background_poster_ad_player_"]
+kahirihome.com##button[id^="pre_ad_close_btn_"]
+kahirihome.com##div[id$="_timer_text"]
+kahirihome.com##button[id$="_skip"]
+
+! บล็อกรูปภาพโฆษณาจาก cdend.com
+||image.cdend.com^
+
+! บล็อก redirect links ของโฆษณา (ibit.ly)
+||ibit.ly^
+
+! บล็อกโฆษณาแถบแนวนอนในเนื้อหา (elementor widgets)
+kahirihome.com##.elementor-element-9785d2f
+kahirihome.com##.elementor-element-702523a
+kahirihome.com##.elementor-element-cba1bc7
+kahirihome.com##.elementor-element-f589347
+kahirihome.com##.elementor-element-a543ded
+kahirihome.com##.elementor-element-9b194f3
+kahirihome.com##.elementor-element-b2f51c5
+kahirihome.com##.elementor-element-9b9f996
+kahirihome.com##.elementor-element-ab17447
+kahirihome.com##.elementor-element-9641951
+
 rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
 rongyok.com##+js(set, isDisplayingContent, false)
