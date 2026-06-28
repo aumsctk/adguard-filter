@@ -263,3 +263,22 @@ xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
 rongyok.com##+js(set, isDisplayingContent, false)
+
+! === บล็อกโฆษณาสำหรับ speed-manga.net ===
+
+! 1. บล็อกการโหลดรูปภาพโฆษณา (GIF/แบนเนอร์) จากเซิร์ฟเวอร์ภายนอก
+||image.cdend.com^$image,domain=speed-manga.net
+
+! 2. ซ่อนกล่องรวมแบนเนอร์โฆษณาขนาดใหญ่ (ที่แทรกก่อนเข้าเนื้อหามังงะ)
+speed-manga.net##.dessert-frame
+speed-manga.net##.blox.mlb.kln
+speed-manga.net##.kln
+
+! 3. ซ่อนโฆษณาแบบลอย (Floating Ads) ที่เกาะขอบจอซ้าย ขวา และล่าง
+speed-manga.net##.tt_bfx
+speed-manga.net##.tt_bfxl
+speed-manga.net##.tt_bfxr
+speed-manga.net##.tt_bfxb
+
+! 4. ซ่อนแบนเนอร์โฆษณาแบบติดหนึบ (Sticky Ad) ที่ขอบล่างของหน้าจอ
+speed-manga.net###c8029w01
