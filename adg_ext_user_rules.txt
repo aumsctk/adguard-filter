@@ -282,3 +282,18 @@ speed-manga.net##.tt_bfxb
 
 ! 4. ซ่อนแบนเนอร์โฆษณาแบบติดหนึบ (Sticky Ad) ที่ขอบล่างของหน้าจอ
 speed-manga.net###c8029w01
+
+
+! ---------------------------------------------------
+! กฎสำหรับบล็อกโฆษณาเว็บ movie911hd.com
+! ---------------------------------------------------
+
+! 1. Network Filtering: บล็อกการโหลดสคริปต์และไฟล์โฆษณาจากโฟลเดอร์ /ads/
+||movie911hd.com/ads/*$domain=movie911hd.com
+
+! 2. Cosmetic Filtering: ซ่อนพื้นที่ (Element) โฆษณาที่อยู่บนหน้าเว็บเพื่อไม่ให้เหลือพื้นที่ว่างรกสายตา
+movie911hd.com##.cg-ad
+movie911hd.com###ui-xheader
+movie911hd.com###ui-xtop
+movie911hd.com###ui-xunder
+movie911hd.com###ui-xfooter
