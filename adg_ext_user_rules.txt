@@ -297,3 +297,26 @@ movie911hd.com###ui-xheader
 movie911hd.com###ui-xtop
 movie911hd.com###ui-xunder
 movie911hd.com###ui-xfooter
+
+! บล็อกแบนเนอร์ที่หน้าเว็บโหลดมา
+||movie911hd.com/ads/
+movie911hd.com###ui-xheader
+movie911hd.com###ui-xtop
+movie911hd.com###ui-xunder
+movie911hd.com###ui-xfooter
+
+! ปิดรายการแบนเนอร์และโฆษณาวิดีโอก่อนหนัง
+movie911hd.com#%#//scriptlet('set-constant', 'bannerPopups', 'emptyArr')
+movie911hd.com#%#//scriptlet('set-constant', 'adSettings', 'emptyArr')
+
+! ซ่อนแบนเนอร์และลิงก์โฆษณาที่ทับตัวเล่น
+movie911hd.com###banner_popup
+movie911hd.com###banner_backdrop
+movie911hd.com###video_overlay_a
+movie911hd.com##.signup_button
+
+! บล็อกไฟล์โฆษณาวิดีโอที่ตรวจพบ
+||sv2.cdnbm168.xyz/media/ufagool.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
