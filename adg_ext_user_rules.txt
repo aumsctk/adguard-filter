@@ -292,3 +292,14 @@ movie911hd.com##.signup_button
 ||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
+
+ MAWTO: บล็อกแหล่งโฆษณาที่พบในหน้าเว็บ
+||cleverwebserver.com^$domain=mawtoload.com
+||traffmovie.com^$domain=mawtoload.com
+||buddievidian.com^$domain=mawtoload.com
+
+! บล็อกปลายทางโฆษณาจากปุ่มดาวน์โหลด
+||disleksiaindonesia.com^$popup,domain=mawtoload.com
+
+! ป้องกันสคริปต์ที่บังคับเปิดโฆษณาในการคลิกครั้งแรก
+mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
