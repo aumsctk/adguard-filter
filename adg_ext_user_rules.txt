@@ -114,7 +114,6 @@ mangaisekaithai.com##.ads
 mangaisekaithai.com##.footer-ads
 mangaisekaithai.com##.c-ads
 mangaisekaithai.com##.ad
-mangaisekaithai.com##div.wrap:first-child > div.body-wrap > div.ads.col-md-12.text-center.mt-2.mb-2:nth-child(3) > a:nth-child(5)
 
 ! --- Slow-Manga ---
 slow-manga.com##.header-ads-section
@@ -151,13 +150,14 @@ reborntrans.com###manga_eagle_ad_widget-35
 
 ! --- Speed-Manga ---
 speed-manga.net##.dessert-frame
-speed-manga.net##.blox.mlb.kln
 speed-manga.net##.tt_bfx
 speed-manga.net##.tt_bfxl
 speed-manga.net##.tt_bfxr
 speed-manga.net##.tt_bfxb
 speed-manga.net###i8cqsek3wi7
 speed-manga.net##.mlb
+speed-manga.net##.kln
+speed-manga.net###c8029w01
 
 ! --- Sing-Manga ---
 sing-manga.com##.ads
@@ -224,8 +224,6 @@ goseries4k.com##body:style(background-image: none !important; background-color: 
 25-hd.com##.banner-content-center
 25-hd.com##.player-promo-box
 25-hd.com##.banner
-25-hd.com##.widget-left > .sidebar-banner-left
-25-hd.com##.widget-right > .sidebar-banner-right
 
 ! --- สดในเมะ (xn--l3c0azab5a2gta.com) ---
 xn--l3c0azab5a2gta.com##.ads
@@ -264,32 +262,12 @@ rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
 rongyok.com##+js(set, isDisplayingContent, false)
 
-! === บล็อกโฆษณาสำหรับ speed-manga.net ===
-
-! 1. บล็อกการโหลดรูปภาพโฆษณา (GIF/แบนเนอร์) จากเซิร์ฟเวอร์ภายนอก
-||image.cdend.com^$image,domain=speed-manga.net
-
-! 2. ซ่อนกล่องรวมแบนเนอร์โฆษณาขนาดใหญ่ (ที่แทรกก่อนเข้าเนื้อหามังงะ)
-speed-manga.net##.dessert-frame
-speed-manga.net##.blox.mlb.kln
-speed-manga.net##.kln
-
-! 3. ซ่อนโฆษณาแบบลอย (Floating Ads) ที่เกาะขอบจอซ้าย ขวา และล่าง
-speed-manga.net##.tt_bfx
-speed-manga.net##.tt_bfxl
-speed-manga.net##.tt_bfxr
-speed-manga.net##.tt_bfxb
-
-! 4. ซ่อนแบนเนอร์โฆษณาแบบติดหนึบ (Sticky Ad) ที่ขอบล่างของหน้าจอ
-speed-manga.net###c8029w01
-
-
 ! ---------------------------------------------------
 ! กฎสำหรับบล็อกโฆษณาเว็บ movie911hd.com
 ! ---------------------------------------------------
 
 ! 1. Network Filtering: บล็อกการโหลดสคริปต์และไฟล์โฆษณาจากโฟลเดอร์ /ads/
-||movie911hd.com/ads/*$domain=movie911hd.com
+||movie911hd.com/ads/
 
 ! 2. Cosmetic Filtering: ซ่อนพื้นที่ (Element) โฆษณาที่อยู่บนหน้าเว็บเพื่อไม่ให้เหลือพื้นที่ว่างรกสายตา
 movie911hd.com##.cg-ad
@@ -298,12 +276,6 @@ movie911hd.com###ui-xtop
 movie911hd.com###ui-xunder
 movie911hd.com###ui-xfooter
 
-! บล็อกแบนเนอร์ที่หน้าเว็บโหลดมา
-||movie911hd.com/ads/
-movie911hd.com###ui-xheader
-movie911hd.com###ui-xtop
-movie911hd.com###ui-xunder
-movie911hd.com###ui-xfooter
 
 ! ปิดรายการแบนเนอร์และโฆษณาวิดีโอก่อนหนัง
 movie911hd.com#%#//scriptlet('set-constant', 'bannerPopups', 'emptyArr')
