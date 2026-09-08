@@ -303,3 +303,23 @@ movie911hd.com##.signup_button
 
 ! ป้องกันสคริปต์ที่บังคับเปิดโฆษณาในการคลิกครั้งแรก
 mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
+
+! HUBSERIES — banners and floating ads
+hubserieshds.com##.bannerrow
+hubserieshds.com###bt-ads
+hubserieshds.com###bt-ads-mini
+hubserieshds.com##iframe.bframe
+hubserieshds.com##a[href*="/go.php?u="]
+||hubserieshds.com/banner/
+||hubserieshds.com/bframe.php^
+
+! Remove the video-ad playlist before player initialization
+nanoplayer.zip#%#//scriptlet('trusted-prune-inbound-object', 'goplayer', 'options.ads')
+
+! Block the five observed ad videos
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4
+||nanoplayer.zip/video/supreme.mp4
+||nanoplayer.zip/video/we356.mp4
+||nanoplayer.zip/video/me356.mp4
+||nanoplayer.zip/video/playerads1.php^$subdocument,urltransform=/playerads1\.php/player.php/
