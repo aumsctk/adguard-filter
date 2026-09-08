@@ -303,3 +303,24 @@ movie911hd.com##.signup_button
 
 ! ป้องกันสคริปต์ที่บังคับเปิดโฆษณาในการคลิกครั้งแรก
 mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
+
+! ซ่อนแบนเนอร์โฆษณา
+hubserieshds.com##.bannerrow
+hubserieshds.com##a[href^="/go.php?"]
+
+! ซ่อนโฆษณาลอยด้านล่างและมุมจอ
+hubserieshds.com###bt-ads
+hubserieshds.com###bt-ads-mini
+hubserieshds.com###bt-ads-mini2
+
+! บล็อกการโหลดรูปและเฟรมโฆษณา
+||hubserieshds.com/banner/$image
+||hubserieshds.com/bframe.php$subdocument
+
+! บล็อกป๊อปอัปจากหน้าเว็บ
+*$popup,domain=hubserieshds.com
+
+! บล็อกคลิปก่อนหนังที่พบใน Filtering log
+||nanoplayer.zip/video/supreme.mp4^$media
+||nanoplayer.zip/video/we356.mp4^$media
+||nanoplayer.zip/video/me356.mp4^$media
