@@ -366,3 +366,11 @@ fairyanime.net##a[href*="ibit.ly"]:has(img)
 
 ! Hide only the click-capturing popup layer inside the final player
 abysscdn.com###overlay
+
+
+! FAIRYANIME — stop page popunder scripts without touching player files
+||premiumvertising.com^$script,domain=fairyanime.net
+||adsco.re^$script,domain=fairyanime.net
+
+! Auto-skip the embedded pre-roll after its one-second skip control appears
+streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '.skip-btn')
