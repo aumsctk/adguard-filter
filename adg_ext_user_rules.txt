@@ -1,3 +1,6 @@
+คัดลอกชุดนี้ **แทนที่ทั้งหมดใน User rules เดิม** แล้วกดบันทึกและรีโหลดหน้าเว็บครับ ผมลบกฎ `urltransform` ที่ทำให้วิดีโอว่างออกแล้ว ส่วนเรื่องกดเล่นครั้งเดียวยังไม่ได้แก้ในชุดนี้
+
+```text
 ! ===================================================================
 ! 1. กฎการบล็อกระดับเครือข่าย (Global & Tracking Network)
 ! ===================================================================
@@ -129,7 +132,7 @@ slow-manga.com##a[href*="ufazeed"]
 reborntrans.com##.manga-eagle-ad-widget-instance
 reborntrans.com##.widget-header-area
 reborntrans.com##.manga-eagle-ad-card
-reborntrans.com##.manga-single-widget-ads-1
+reborntrans.com##.manga-eagle-ad-widget-ads-1
 reborntrans.com###wbnn-bottom
 reborntrans.com###wbnn-left
 reborntrans.com###wbnn-right
@@ -238,7 +241,6 @@ liquipedia.net##.content-ad
 liquipedia.net##.dropdown-betting-ad-button
 liquipedia.net##div[id^="div-gpt-ad"]
 
-
 ! --- บ้านมังกร.com (xn--12cl7cd0bo9gf0s.com) ---
 ! 1. ซ่อนกล่องแบนเนอร์โฆษณาที่อยู่เหนือตัวเล่นวิดีโอ
 xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
@@ -257,7 +259,6 @@ xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 ! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์ (Network Rules)
 ||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
 
-
 rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
 rongyok.com##+js(set, isDisplayingContent, false)
@@ -269,13 +270,12 @@ rongyok.com##+js(set, isDisplayingContent, false)
 ! 1. Network Filtering: บล็อกการโหลดสคริปต์และไฟล์โฆษณาจากโฟลเดอร์ /ads/
 ||movie911hd.com/ads/
 
-! 2. Cosmetic Filtering: ซ่อนพื้นที่ (Element) โฆษณาที่อยู่บนหน้าเว็บเพื่อไม่ให้เหลือพื้นที่ว่างรกสายตา
+! 2. Cosmetic Filtering: ซ่อนพื้นที่โฆษณาที่อยู่บนหน้าเว็บ
 movie911hd.com##.cg-ad
 movie911hd.com###ui-xheader
 movie911hd.com###ui-xtop
 movie911hd.com###ui-xunder
 movie911hd.com###ui-xfooter
-
 
 ! ปิดรายการแบนเนอร์และโฆษณาวิดีโอก่อนหนัง
 movie911hd.com#%#//scriptlet('set-constant', 'bannerPopups', 'emptyArr')
@@ -293,7 +293,7 @@ movie911hd.com##.signup_button
 ||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
 
- MAWTO: บล็อกแหล่งโฆษณาที่พบในหน้าเว็บ
+! MAWTO: บล็อกแหล่งโฆษณาที่พบในหน้าเว็บ
 ||cleverwebserver.com^$domain=mawtoload.com
 ||traffmovie.com^$domain=mawtoload.com
 ||buddievidian.com^$domain=mawtoload.com
@@ -304,7 +304,9 @@ movie911hd.com##.signup_button
 ! ป้องกันสคริปต์ที่บังคับเปิดโฆษณาในการคลิกครั้งแรก
 mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
 
+! ===================================================================
 ! HUBSERIES — banners and floating ads
+! ===================================================================
 hubserieshds.com##.bannerrow
 hubserieshds.com###bt-ads
 hubserieshds.com###bt-ads-mini
@@ -314,7 +316,7 @@ hubserieshds.com##a[href*="/go.php?u="]
 ||hubserieshds.com/bframe.php^
 
 ! Remove the video-ad playlist before player initialization
-nanoplayer.zip#%#//scriptlet('trusted-prune-inbound-object', 'goplayer', 'options.ads')
+nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({', '"ads":', '"disabledAds":')
 
 ! Block the five observed ad videos
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4
@@ -322,4 +324,3 @@ nanoplayer.zip#%#//scriptlet('trusted-prune-inbound-object', 'goplayer', 'option
 ||nanoplayer.zip/video/supreme.mp4
 ||nanoplayer.zip/video/we356.mp4
 ||nanoplayer.zip/video/me356.mp4
-||nanoplayer.zip/video/playerads1.php^$subdocument,urltransform=/playerads1\.php/player.php/
