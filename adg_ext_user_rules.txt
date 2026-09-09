@@ -368,4 +368,4 @@ fairyanime.net##a[href*="ibit.ly"]:has(img)
 ! Remove the click-capturing ad layer so the first click starts playback
 abysscdn.com###overlay
 ||decafeligiblyhad.com^$popup,domain=abysscdn.com
-abysscdn.com#%#//scriptlet('prevent-window-open')
+
