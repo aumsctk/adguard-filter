@@ -1,30 +1,34 @@
-คัดลอกชุดนี้ **แทนที่ทั้งหมดใน User rules เดิม** แล้วกดบันทึกและรีโหลดหน้าเว็บครับ ผมลบกฎ `urltransform` ที่ทำให้วิดีโอว่างออกแล้ว ส่วนเรื่องกดเล่นครั้งเดียวยังไม่ได้แก้ในชุดนี้
+! กฎผู้ใช้ AdGuard สำหรับส่วนขยายบน Microsoft Edge
+! คำอธิบายและหัวข้อขึ้นต้นด้วย ! และไม่ใช่ตัวกฎ
+! จัดคำอธิบายตามกฎเดิม ยังไม่ได้ตรวจประสิทธิภาพกับเว็บไซต์จริงในรอบนี้
 
-```text
 ! ===================================================================
-! 1. กฎการบล็อกระดับเครือข่าย (Global & Tracking Network)
+! ส่วนกลาง: บล็อกการเชื่อมต่อไปยังแหล่งโฆษณา ใช้กับทุกเว็บไซต์
 ! ===================================================================
 ! บล็อกเซิร์ฟเวอร์รูปภาพโฆษณาที่หลายเว็บใช้ร่วมกัน
 ||image.cdend.com^
 
-! บล็อกตัวย่อลิงก์ที่มักพาไปเว็บพนัน
+! บล็อกโดเมนและเส้นทางลิงก์ที่ระบุด้านล่าง รวมถึงลิงก์ย่อ
 ||ibit.ly^
 ||debet.win^
 ||regem.bet^
 ||cutt.ly/UFANICE*^
 
 ! ===================================================================
-! 2. กฎทั่วไปที่ใช้ได้ทุกเว็บ (Global Selectors)
+! ส่วนกลาง: ซ่อนลิงก์และองค์ประกอบโฆษณาที่ตรงกับเงื่อนไขในทุกเว็บไซต์
 ! ===================================================================
 ##a[href*="cutt.ly/UFANICE"]
 ##a:has(img[src*="UFANICE"])
 ##a:has(.absolute.top-2.left-2 > span:contains(AD))
 
 ! ===================================================================
-! หมวดหมู่เว็บอ่านมังงะ (Manga Websites)
+! กลุ่มเว็บไซต์มังงะและอนิเมะ
 ! ===================================================================
 
-! --- Go-Manga ---
+! ===================================================================
+! เว็บไซต์: go-manga.com
+! ซ่อนแบนเนอร์และแถบลอย ปรับพื้นหลัง และบล็อกเส้นทางลิงก์โฆษณา
+! ===================================================================
 go-manga.com##.center_gomanga
 go-manga.com##.center_gomangafixsize
 go-manga.com##.center_gomangasolo
@@ -35,7 +39,10 @@ go-manga.com###sticky-bottom3
 go-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
 ||go-manga.com/link_to.php^
 
-! --- Up-Manga ---
+! ===================================================================
+! เว็บไซต์: up-manga.com
+! ซ่อนแบนเนอร์ แถบลอย และลิงก์ที่ระบุ พร้อมปรับพื้นหลัง
+! ===================================================================
 up-manga.com##.center_upmanga
 up-manga.com##.center_upmanga3
 up-manga.com##.center_upmangaza
@@ -54,7 +61,10 @@ up-manga.com##a[href*="pgk44"]
 up-manga.com##a[href*="ufabet"]
 ||up-manga.com/link_to.php^
 
-! --- AnimeRuka ---
+! ===================================================================
+! เว็บไซต์: animeruka.com
+! ซ่อนกล่องโฆษณาและแบนเนอร์ พร้อมกฎบล็อกรูปและสคริปต์ในชุดเดิม
+! ===================================================================
 animeruka.com###animerukaads1
 animeruka.com###animerukaads2
 animeruka.com###animerukaads3
@@ -74,7 +84,10 @@ animeruka.com##center:has(#animerukaads5)
 ||animeruka.com/ads/$image,domain=animeruka.com
 ||animeruka.com^$script,contain=ai_insert
 
-! --- Anime-MasterX ---
+! ===================================================================
+! เว็บไซต์: anime-masterx.com
+! ซ่อนแบนเนอร์และลิงก์ที่ระบุ พร้อมกฎหยุดสคริปต์ที่เขียนค่าการเลื่อนหน้า
+! ===================================================================
 anime-masterx.com##.banner-close
 anime-masterx.com##div[id="slider-b"]
 anime-masterx.com##.img-responsive2
@@ -88,7 +101,10 @@ anime-masterx.com##a[href*="sexygame"]
 anime-masterx.com##a[href*="pgk44"]
 anime-masterx.com#%#//scriptlet("abort-on-property-write", "document.documentElement.scrollTop")
 
-! --- MangaSuper ---
+! ===================================================================
+! เว็บไซต์: mangasuper.com
+! ซ่อนแถบโฆษณาด้านล่าง กล่องแบนเนอร์ และลิงก์ที่ระบุ
+! ===================================================================
 mangasuper.com##div[id^="sticky-ads-bottom"]
 mangasuper.com##div[id="block-9"]
 mangasuper.com##div[id="block-10"]
@@ -98,7 +114,10 @@ mangasuper.com##a[href*="ibit.ly"]
 mangasuper.com##a[href*="pokbet"]
 mangasuper.com##a[href*="debet"]
 
-! --- Cartoon-TH ---
+! ===================================================================
+! เว็บไซต์: cartoon-th.com
+! ซ่อนกรอบโฆษณา แถบลอย และลิงก์ที่ระบุ
+! ===================================================================
 cartoon-th.com##.kln
 cartoon-th.com##.dessert-frame
 cartoon-th.com##.tt_bfx
@@ -112,13 +131,19 @@ cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
 
-! --- MangaIsekaiThai ---
+! ===================================================================
+! เว็บไซต์: mangaisekaithai.com
+! ซ่อนพื้นที่โฆษณาและโฆษณาท้ายหน้า
+! ===================================================================
 mangaisekaithai.com##.ads
 mangaisekaithai.com##.footer-ads
 mangaisekaithai.com##.c-ads
 mangaisekaithai.com##.ad
 
-! --- Slow-Manga ---
+! ===================================================================
+! เว็บไซต์: slow-manga.com
+! ซ่อนโฆษณาส่วนหัว รูปตามขนาดที่ระบุ และลิงก์โฆษณา
+! ===================================================================
 slow-manga.com##.header-ads-section
 slow-manga.com##img[src*="728x200"]
 slow-manga.com##a[href*="ibit.ly"]
@@ -128,7 +153,10 @@ slow-manga.com##a[href*="sexy365bet"]
 slow-manga.com##a[href*="mahagame66"]
 slow-manga.com##a[href*="ufazeed"]
 
-! --- RebornTrans ---
+! ===================================================================
+! เว็บไซต์: reborntrans.com
+! ซ่อนกล่องโฆษณา พื้นที่ส่วนหัว และแบนเนอร์ลอยตามรายการ
+! ===================================================================
 reborntrans.com##.manga-eagle-ad-widget-instance
 reborntrans.com##.widget-header-area
 reborntrans.com##.manga-eagle-ad-card
@@ -151,7 +179,10 @@ reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
 
-! --- Speed-Manga ---
+! ===================================================================
+! เว็บไซต์: speed-manga.net
+! ซ่อนกรอบโฆษณาและแถบลอยตามรายการ
+! ===================================================================
 speed-manga.net##.dessert-frame
 speed-manga.net##.tt_bfx
 speed-manga.net##.tt_bfxl
@@ -162,7 +193,10 @@ speed-manga.net##.mlb
 speed-manga.net##.kln
 speed-manga.net###c8029w01
 
-! --- Sing-Manga ---
+! ===================================================================
+! เว็บไซต์: sing-manga.com
+! ซ่อนพื้นที่โฆษณา รูปจากแหล่งที่ระบุ และลิงก์โฆษณา
+! ===================================================================
 sing-manga.com##.ads
 sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
 sing-manga.com##img[src*="image.cdend.com"]
@@ -171,7 +205,10 @@ sing-manga.com##a[href*="huaylike"]
 sing-manga.com##a[href*="lalikabet"]
 sing-manga.com##a[href*="1stgame"]
 
-! --- Black-Manga ---
+! ===================================================================
+! เว็บไซต์: black-manga.com
+! ซ่อนแบนเนอร์ แถบลอยด้านข้างและด้านล่าง และลิงก์โฆษณา
+! ===================================================================
 black-manga.com##.center_blackmangaza
 black-manga.com##.center_blackmanga
 black-manga.com##.center_blackmangasolo
@@ -184,28 +221,37 @@ black-manga.com##.mobile-float-left
 black-manga.com##.floating_content
 black-manga.com##a[href^="/link_to.php"]
 
-! --- ReaperTrans ---
+! ===================================================================
+! เว็บไซต์: reapertrans.com
+! ซ่อนพื้นที่แบนเนอร์ กล่องโฆษณา และลิงก์ที่ระบุ
+! ===================================================================
 reapertrans.com##.sort-ban a
 reapertrans.com##a[href*="ibit.ly"]
 reapertrans.com##div[id^="ads_"]
 
-! --- Nano-Manga ---
+! ===================================================================
+! เว็บไซต์: nano-manga.com
+! ซ่อนแบนเนอร์และแถบลอย พร้อมบล็อกเส้นทางลิงก์โฆษณา
+! ===================================================================
 ! ซ่อนกล่องแบนเนอร์โฆษณาขนาดใหญ่และแบบลอย
 nano-manga.com###block-5
 nano-manga.com###block-6
 nano-manga.com###sticky-ads-bottom
 nano-manga.com###sticky-ads-bottom2
 nano-manga.com###sticky-ads-bottom3
-! ซ่อนองค์ประกอบที่เป็นลิงก์ออกไปยังโฆษณาทั้งหมด
+! ซ่อนลิงก์ที่ขึ้นต้นด้วยเส้นทาง /link_to.php?url=
 nano-manga.com##a[href^="/link_to.php?url="]
-! [ขั้นสูง] บล็อกการโหลดลิงก์โฆษณาในระดับ Network
+! บล็อกการร้องขอไปยังเส้นทางเปลี่ยนปลายทางลิงก์โฆษณา
 ||nano-manga.com/link_to.php^
 
 ! ===================================================================
-! หมวดหมู่เว็บดูหนัง ซีรีส์ และอื่นๆ (Streaming & Misc)
+! กลุ่มเว็บไซต์หนัง ซีรีส์ และเว็บไซต์อื่น ๆ
 ! ===================================================================
 
-! --- Goseries4k ---
+! ===================================================================
+! เว็บไซต์: goseries4k.com
+! ซ่อนแบนเนอร์และแถบด้านข้าง ปรับพื้นหลัง และบล็อกไฟล์ตกแต่งโฆษณากับหน้าต่างที่ตรงกับกฎ
+! ===================================================================
 goseries4k.com##.vipx-grid
 goseries4k.com##.vipx-item
 goseries4k.com##.list-ads
@@ -217,7 +263,10 @@ goseries4k.com##body:style(background-image: none !important; background-color: 
 ||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
 ||goseries4k.com^$popup
 
-! --- 25-HD ---
+! ===================================================================
+! เว็บไซต์: 25-hd.com
+! ซ่อนแบนเนอร์รอบหน้าเว็บและกล่องประชาสัมพันธ์ในตัวเล่น
+! ===================================================================
 25-hd.com##.main-banner
 25-hd.com##.banner-f-left-1
 25-hd.com##.banner-f-right-1
@@ -228,12 +277,18 @@ goseries4k.com##body:style(background-image: none !important; background-color: 
 25-hd.com##.player-promo-box
 25-hd.com##.banner
 
-! --- สดในเมะ (xn--l3c0azab5a2gta.com) ---
+! ===================================================================
+! เว็บไซต์: xn--l3c0azab5a2gta.com
+! ซ่อนพื้นที่โฆษณาและองค์ประกอบเฟซบุ๊กที่ฝังในหน้าเว็บ
+! ===================================================================
 xn--l3c0azab5a2gta.com##.ads
 xn--l3c0azab5a2gta.com##.fb_iframe_widget
 xn--l3c0azab5a2gta.com##div#fb-root
 
-! --- Liquipedia ---
+! ===================================================================
+! เว็บไซต์: liquipedia.net
+! ซ่อนโฆษณาด้านบน ด้านข้าง ในเนื้อหา และปุ่มโฆษณาพนัน
+! ===================================================================
 liquipedia.net###top-ad
 liquipedia.net###sidebar-ad
 liquipedia.net##.content-ad-block
@@ -241,36 +296,46 @@ liquipedia.net##.content-ad
 liquipedia.net##.dropdown-betting-ad-button
 liquipedia.net##div[id^="div-gpt-ad"]
 
-! --- บ้านมังกร.com (xn--12cl7cd0bo9gf0s.com) ---
+! ===================================================================
+! เว็บไซต์: xn--12cl7cd0bo9gf0s.com
+! ซ่อนแบนเนอร์เหนือตัวเล่นและลิงก์ที่ระบุ
+! ===================================================================
 ! 1. ซ่อนกล่องแบนเนอร์โฆษณาที่อยู่เหนือตัวเล่นวิดีโอ
 xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
 ! 2. ซ่อนป้ายโฆษณาเว็บพนันแบบเจาะจง
 xn--12cl7cd0bo9gf0s.com##a[href*="ambmax.pro"]
 xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
-! 3. บล็อกการเชื่อมต่อกับเว็บปลายทางของโฆษณาโดยตรง
+! 3. บล็อกโดเมนปลายทางด้านล่างในทุกเว็บไซต์ แม้จัดไว้ในหัวข้อเว็บนี้
 ||ambmax.pro^
 ||superslot.asia^
 
-! --- 9nung.com ---
-! ซ่อนพื้นที่และกล่องแบนเนอร์โฆษณา (Cosmetic Rules)
+! ===================================================================
+! เว็บไซต์: 9nung.com
+! ซ่อนพื้นที่โฆษณาและบล็อกการดึงข้อมูลโฆษณา
+! ===================================================================
+! ซ่อนพื้นที่และกล่องแบนเนอร์โฆษณาบนหน้าเว็บ
 9nung.com##aside.adsnon-zone
 9nung.com##aside[aria-label="advertisement"]
 
-! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์ (Network Rules)
+! บล็อกการดึงข้อมูลโฆษณาจากเซิร์ฟเวอร์
 ||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
 
+! ===================================================================
+! เว็บไซต์: rongyok.com
+! ซ่อนกล่องซ้อนทับและข้อความโหลด พร้อมตั้งค่าสถานะการแสดงเนื้อหาเป็นเท็จ
+! ===================================================================
 rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
 rongyok.com##+js(set, isDisplayingContent, false)
 
 ! ---------------------------------------------------
-! กฎสำหรับบล็อกโฆษณาเว็บ movie911hd.com
+! เว็บไซต์: movie911hd.com — กฎสำหรับแบนเนอร์และโฆษณาก่อนวิดีโอ
 ! ---------------------------------------------------
 
-! 1. Network Filtering: บล็อกการโหลดสคริปต์และไฟล์โฆษณาจากโฟลเดอร์ /ads/
+! บล็อกการโหลดไฟล์จากโฟลเดอร์ /ads/
 ||movie911hd.com/ads/
 
-! 2. Cosmetic Filtering: ซ่อนพื้นที่โฆษณาที่อยู่บนหน้าเว็บ
+! ซ่อนพื้นที่โฆษณาที่อยู่บนหน้าเว็บ
 movie911hd.com##.cg-ad
 movie911hd.com###ui-xheader
 movie911hd.com###ui-xtop
@@ -287,13 +352,16 @@ movie911hd.com###banner_backdrop
 movie911hd.com###video_overlay_a
 movie911hd.com##.signup_button
 
-! บล็อกไฟล์โฆษณาวิดีโอที่ตรวจพบ
+! บล็อกไฟล์วิดีโอโฆษณาตามรายการในชุดกฎเดิม
 ||sv2.cdnbm168.xyz/media/ufagool.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
 
-! MAWTO: บล็อกแหล่งโฆษณาที่พบในหน้าเว็บ
+! ===================================================================
+! เว็บไซต์: mawtoload.com
+! ===================================================================
+! บล็อกแหล่งโฆษณาตามรายการในชุดกฎเดิม
 ||cleverwebserver.com^$domain=mawtoload.com
 ||traffmovie.com^$domain=mawtoload.com
 ||buddievidian.com^$domain=mawtoload.com
@@ -305,7 +373,7 @@ movie911hd.com##.signup_button
 mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
 
 ! ===================================================================
-! HUBSERIES — banners and floating ads
+! เว็บไซต์: hubserieshds.com — ซ่อนแบนเนอร์และโฆษณาลอย
 ! ===================================================================
 hubserieshds.com##.bannerrow
 hubserieshds.com###bt-ads
@@ -315,10 +383,13 @@ hubserieshds.com##a[href*="/go.php?u="]
 ||hubserieshds.com/banner/
 ||hubserieshds.com/bframe.php^
 
-! Remove the video-ad playlist before player initialization
+! ===================================================================
+! ตัวเล่นวิดีโอ: nanoplayer.zip — กฎที่จัดไว้ร่วมกับ hubserieshds.com
+! ===================================================================
+! เปลี่ยนชื่อการตั้งค่ารายการโฆษณาในสคริปต์ก่อนเริ่มตัวเล่น
 nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({', '"ads":', '"disabledAds":')
 
-! Block the five observed ad videos
+! บล็อกไฟล์วิดีโอโฆษณา 5 รายการจาก googles.video และ nanoplayer.zip
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4
 ||nanoplayer.zip/video/supreme.mp4
@@ -327,7 +398,7 @@ nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({'
 
 
 ! =========================================================
-! V8-HDMOVIE — page ads and floating banners
+! เว็บไซต์: v8-hdmovie.com — ซ่อนโฆษณาบนหน้าเว็บและแบนเนอร์ลอย
 ! =========================================================
 v8-hdmovie.com##.row-kodsana-container
 v8-hdmovie.com##.row-kodsana
@@ -341,7 +412,7 @@ v8-hdmovie.com##a[href*="c301.cc"]:has(img)
 ||c301.cc^$popup,domain=v8-hdmovie.com
 
 ! =========================================================
-! STREAM1689 — ads layered over and before the video
+! ตัวเล่นวิดีโอ: stream1689.com — กฎสำหรับโฆษณาทับตัวเล่นและก่อนวิดีโอ
 ! =========================================================
 ||stream1689.com/v4/js/stream1688/ads-popup.js$script
 stream1689.com###adPopup
@@ -354,23 +425,28 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 
 
 ! =========================================================
-! FAIRYANIME — banners, popunders, and layered player ads
+! เว็บไซต์: fairyanime.net — ซ่อนแบนเนอร์และบล็อกหน้าต่างโฆษณา
 ! =========================================================
 fairyanime.net##.kosana-banner
 fairyanime.net##a[href*="ibit.ly"]:has(img)
 
-! FAIRYANIME player — popup destinations only; keep player scripts allowed
+! กฎร่วมของ fairyanime.net, player.marimo.me และ abysscdn.com
+! บล็อกหน้าต่างโฆษณาที่เปิดไปยังโดเมนตามรายการ
 ||blockadsnot.com^$popup,domain=fairyanime.net|player.marimo.me
 ||tenlets.com^$popup,domain=abysscdn.com|player.marimo.me
 ||decafeligiblyhad.com^$popup,domain=abysscdn.com
 
-! Hide only the click-capturing popup layer inside the final player
+! ตัวเล่นวิดีโอ: abysscdn.com
+! ซ่อนชั้นซ้อนทับที่มีรหัส overlay ภายในตัวเล่น
 abysscdn.com###overlay
 
 
-! FAIRYANIME — stop page popunder scripts without touching player files
+! เว็บไซต์: fairyanime.net — บล็อกสคริปต์เปิดหน้าต่างโฆษณาจากโดเมนที่ระบุ
 ||premiumvertising.com^$script,domain=fairyanime.net
 ||adsco.re^$script,domain=fairyanime.net
 
-! Auto-skip the embedded pre-roll after its one-second skip control appears
+! ===================================================================
+! ตัวเล่นวิดีโอ: streaming.tonytonychopper.com
+! ===================================================================
+! กดปุ่มข้ามโฆษณาโดยอัตโนมัติเมื่อพบปุ่มที่ตรงกับ .skip-btn
 streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '.skip-btn')
