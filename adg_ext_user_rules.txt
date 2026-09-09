@@ -358,3 +358,11 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 ! =========================================================
 fairyanime.net##.kosana-banner
 fairyanime.net##a[href*="ibit.ly"]:has(img)
+
+! FAIRYANIME player — popup destinations only; keep player scripts allowed
+||blockadsnot.com^$popup,domain=fairyanime.net|player.marimo.me
+||tenlets.com^$popup,domain=abysscdn.com|player.marimo.me
+||decafeligiblyhad.com^$popup,domain=abysscdn.com
+
+! Hide only the click-capturing popup layer inside the final player
+abysscdn.com###overlay
