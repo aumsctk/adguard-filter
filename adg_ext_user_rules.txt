@@ -324,3 +324,30 @@ nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({'
 ||nanoplayer.zip/video/supreme.mp4
 ||nanoplayer.zip/video/we356.mp4
 ||nanoplayer.zip/video/me356.mp4
+
+
+! =========================================================
+! V8-HDMOVIE — page ads and floating banners
+! =========================================================
+v8-hdmovie.com##.row-kodsana-container
+v8-hdmovie.com##.row-kodsana
+v8-hdmovie.com###ads-all
+v8-hdmovie.com###adLeft
+v8-hdmovie.com###adRight
+v8-hdmovie.com###adBottom
+v8-hdmovie.com##a[href*="ibit.ly"]:has(img)
+v8-hdmovie.com##a[href*="c301.cc"]:has(img)
+||ibit.ly^$popup,domain=v8-hdmovie.com|stream1689.com
+||c301.cc^$popup,domain=v8-hdmovie.com
+
+! =========================================================
+! STREAM1689 — ads layered over and before the video
+! =========================================================
+||stream1689.com/v4/js/stream1688/ads-popup.js$script
+stream1689.com###adPopup
+stream1689.com###adCloseBtn
+stream1689.com##a[href*="ibit.ly/vip168sa"]
+stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', '"ads": [', '"disabledAds": [')
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=stream1689.com
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
