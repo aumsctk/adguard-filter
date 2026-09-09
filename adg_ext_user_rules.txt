@@ -423,30 +423,3 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
 
-
-! =========================================================
-! เว็บไซต์: fairyanime.net — ซ่อนแบนเนอร์และบล็อกหน้าต่างโฆษณา
-! =========================================================
-fairyanime.net##.kosana-banner
-fairyanime.net##a[href*="ibit.ly"]:has(img)
-
-! กฎร่วมของ fairyanime.net, player.marimo.me และ abysscdn.com
-! บล็อกหน้าต่างโฆษณาที่เปิดไปยังโดเมนตามรายการ
-||blockadsnot.com^$popup,domain=fairyanime.net|player.marimo.me
-||tenlets.com^$popup,domain=abysscdn.com|player.marimo.me
-||decafeligiblyhad.com^$popup,domain=abysscdn.com
-
-! ตัวเล่นวิดีโอ: abysscdn.com
-! ซ่อนชั้นซ้อนทับที่มีรหัส overlay ภายในตัวเล่น
-abysscdn.com###overlay
-
-
-! เว็บไซต์: fairyanime.net — บล็อกสคริปต์เปิดหน้าต่างโฆษณาจากโดเมนที่ระบุ
-||premiumvertising.com^$script,domain=fairyanime.net
-||adsco.re^$script,domain=fairyanime.net
-
-! ===================================================================
-! ตัวเล่นวิดีโอ: streaming.tonytonychopper.com
-! ===================================================================
-! กดปุ่มข้ามโฆษณาโดยอัตโนมัติเมื่อพบปุ่มที่ตรงกับ .skip-btn
-streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '.skip-btn')
