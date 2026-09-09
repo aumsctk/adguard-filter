@@ -351,3 +351,21 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
+
+
+! =========================================================
+! FAIRYANIME — banners, popunders, and layered player ads
+! =========================================================
+fairyanime.net##.kosana-banner
+fairyanime.net##a[href*="ibit.ly"]:has(img)
+||premiumvertising.com^$third-party,domain=fairyanime.net|player.marimo.me
+||adsco.re^$third-party,domain=fairyanime.net|player.marimo.me
+||blockadsnot.com^$third-party,domain=fairyanime.net|player.marimo.me
+||dtscout.com^$third-party,domain=streaming.tonytonychopper.com
+||dtscdn.com^$third-party,domain=streaming.tonytonychopper.com
+||mrktmtrcs.net^$third-party,domain=streaming.tonytonychopper.com
+
+! Remove the click-capturing ad layer so the first click starts playback
+abysscdn.com###overlay
+||decafeligiblyhad.com^$popup,domain=abysscdn.com
+abysscdn.com#%#//scriptlet('prevent-window-open')
