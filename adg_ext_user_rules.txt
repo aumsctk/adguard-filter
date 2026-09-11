@@ -423,3 +423,23 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
 
+! ===================================================================
+! เว็บไซต์: applejr.net — แบนเนอร์และโฆษณาที่เปิดตอนกดปุ่ม
+! ตรวจจากโค้ดหน้าเว็บวันที่ 11 กันยายน 2569
+! ===================================================================
+! ซ่อนกรอบแบนเนอร์ในหน้ารายการแอป
+applejr.net##.library-ad
+
+! บล็อกแหล่งแบนเนอร์และสคริปต์เปิดหน้าต่างโฆษณาเมื่อคลิก
+! ครอบคลุมหน้าหลักและหน้าคั่นดาวน์โหลด applejr.xyz
+||decreasestreet.com^$domain=applejr.net|applejr.xyz
+||gpcasla.org^$domain=applejr.net|applejr.xyz
+
+! ===================================================================
+! เว็บไซต์: applejr.xyz — หน้าคั่นจากปุ่มดาวน์โหลดของ applejr.net
+! ===================================================================
+! ซ่อนพื้นที่โฆษณา โดยคงปุ่มดาวน์โหลดและสคริปต์ส่งต่อไฟล์ไว้
+applejr.xyz###adsterra_section
+applejr.xyz###top_ads
+applejr.xyz###middle_ads2
+applejr.xyz##div[id^="container-1a8d25c81aed7c54407186d56a589c11"]
