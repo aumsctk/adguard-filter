@@ -443,3 +443,27 @@ applejr.xyz###adsterra_section
 applejr.xyz###top_ads
 applejr.xyz###middle_ads2
 applejr.xyz##div[id^="container-1a8d25c81aed7c54407186d56a589c11"]
+
+! ===================================================================
+! เว็บไซต์: khoindvn.io.vn — โฆษณาและลิงก์ซ้อนทับปุ่ม
+! ตรวจหน้าแรก หน้า /install/ และสคริปต์รายการแอป วันที่ 11 กันยายน 2569
+! ===================================================================
+! บล็อกสคริปต์ดักคลิกและเปิดหน้าต่างโฆษณาทั้งสองแหล่ง
+! จำกัดเฉพาะเว็บนี้และโดเมนย่อย ไม่บล็อกบริการคลาวด์ทั้งหมด
+||wingsmob.com^$domain=khoindvn.io.vn
+||dc9xwpjprguup.cloudfront.net^$domain=khoindvn.io.vn
+
+! บล็อกสคริปต์ประกอบที่ระบบโฆษณาโหลดเพิ่ม
+||portalfluently.com^$domain=khoindvn.io.vn
+
+! บล็อกปลายทางโฆษณาที่พบ และซ่อนลิงก์ซ้อนทับที่รับการคลิก
+||disleksiaindonesia.com^$domain=khoindvn.io.vn
+||disleksiaindonesia.com^$popup,domain=khoindvn.io.vn
+khoindvn.io.vn##a[href*="//disleksiaindonesia.com/"]
+
+! ซ่อนข้อความและปุ่มโปรโมตร้านใบรับรองบนหน้าแรกและหน้าดาวน์โหลด
+khoindvn.io.vn##p:has(> a[href="https://muacert.com"])
+khoindvn.io.vn##a[href="https://muacert.com"]
+
+! คงสคริปต์รายการแอป ปุ่มติดตั้ง ไฟล์ใบรายการติดตั้ง และลิงก์ดาวน์โหลดจริงไว้
+! ตรวจจากโค้ดและหน้าเว็บบนคอม ยังไม่ได้ทดสอบกฎบน Safari ใน iPhone
