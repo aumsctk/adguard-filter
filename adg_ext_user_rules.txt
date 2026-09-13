@@ -467,3 +467,123 @@ khoindvn.io.vn##a[href="https://muacert.com"]
 
 ! คงสคริปต์รายการแอป ปุ่มติดตั้ง ไฟล์ใบรายการติดตั้ง และลิงก์ดาวน์โหลดจริงไว้
 ! ตรวจจากโค้ดและหน้าเว็บบนคอม ยังไม่ได้ทดสอบกฎบน Safari ใน iPhone
+
+! ===================================================================
+! เว็บไซต์: dunung24.com — แบนเนอร์ ป๊อปอัป ลิงก์โฆษณา และโฆษณาก่อนคลิป
+! ตรวจหน้า Peacemaker Season 1 และตัวเล่น วันที่ 13 กันยายน 2569
+! ===================================================================
+! ซ่อนภาพโฆษณาพร้อมคำโปรย และลิงก์ปลายทางโฆษณาที่พบ
+dunung24.com##figure:has(a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"]))
+dunung24.com##a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"])
+! ซ่อนหน้าต่างแบนเนอร์ที่แสดงหลังโหลดหน้า
+dunung24.com###ssip-popup
+
+! บล็อกหน้าต่างใหม่ที่เปิดไปยังปลายทางโฆษณา จำกัดเฉพาะเว็บนี้
+||ibit.ly^$popup,domain=dunung24.com
+||t.ly^$popup,domain=dunung24.com
+||upwin.me^$popup,domain=dunung24.com
+||the88top.com^$popup,domain=dunung24.com
+||wy88.bet^$popup,domain=dunung24.com
+||ck88.asia^$popup,domain=dunung24.com
+||888paruay.com^$popup,domain=dunung24.com
+||miracle55.net^$popup,domain=dunung24.com
+||123playx.com^$popup,domain=dunung24.com
+||bacara8.com^$popup,domain=dunung24.com
+||xn--72c7cj5azb7hk.com^$popup,domain=dunung24.com
+
+! ปิดฟังก์ชันสร้างโฆษณาก่อนคลิปของเว็บ โดยไม่แก้สคริปต์เล่นหนัง
+! สคริปต์นี้ใช้กับตัวเล่นชนิด .jw-box; หน้าซีรีส์ที่ตรวจใช้ #player_iframe
+dunung24.com#%#//scriptlet('trusted-replace-node-text', 'script', 'jwpaFrame', 'function prepare(target){', 'function prepare(target){return;')
+
+! บล็อกเฉพาะเส้นทางวิดีโอโฆษณาสองชุดที่พบในสคริปต์
+||bacara8.com/sbogool2/$domain=dunung24.com
+||bacara8.com/sexy365/$domain=dunung24.com
+
+! สำรอง: ซ่อนชั้นโฆษณาและคืนการมองเห็นเฟรมหนัง หากชั้นโฆษณาถูกสร้างแล้ว
+dunung24.com##.jwpa-video, .jwpa-start, .jwpa-skip, .jwpa-signup, .jwpa-count
+dunung24.com##.jwpa-box > .jwpa-frame:style(visibility: visible !important;)
+
+! คงตัวเล่น master.streamhls.com และสตรีม master.steamhls88.com ไว้
+! ตรวจลิงก์เลือกตอนครบ 8 ตอน แต่ยังไม่ได้ยืนยันการเล่นหลังใช้กฎจริง
+! ชุดนี้ไม่ลบภาพหรือเสียงโฆษณาที่ตัดต่อรวมอยู่ในไฟล์หนัง
+
+! ===================================================================
+! เว็บไซต์: fairyanime.net — แบนเนอร์และโฆษณาที่เปิดจากการคลิก
+! ตรวจหน้า /watch/ofrIgCPryU.html วันที่ 13 กันยายน 2569
+! ===================================================================
+! ซ่อนแบนเนอร์และลิงก์ที่ครอบแบนเนอร์ ตรวจพบ 9 จุดในหน้าตัวอย่าง
+fairyanime.net##.kosana-banner
+fairyanime.net##a:has(> img.kosana-banner)
+||banner.tonytonychopper.com^$image,domain=fairyanime.net
+
+! บล็อกสคริปต์โฆษณาที่ตรวจพบหลังหน้าเว็บโหลด
+||premiumvertising.com^$domain=fairyanime.net
+||adsco.re^$domain=fairyanime.net
+
+! บล็อกหน้าต่างโฆษณาที่พาไปลิงก์ย่อบนหน้าเว็บและชั้นโฆษณาก่อนคลิป
+||ibit.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
+||cutt.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
+||rebrand.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
+||t.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
+
+! ===================================================================
+! ตัวเล่น: streaming.tonytonychopper.com — โฆษณาก่อนคลิปของ Fairyanime
+! ===================================================================
+! บล็อกไฟล์โฆษณาสองรายการโดยไม่บล็อกโดเมนวิดีโอทั้งหมด
+! โค้ดตัวเล่นมีการข้ามไปคลิปถัดไปเมื่อเกิดข้อผิดพลาดในการเล่นโฆษณา
+||cdend.com/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=streaming.tonytonychopper.com
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/hydra888.mp4$domain=streaming.tonytonychopper.com
+
+! ซ่อนเฉพาะชั้นลิงก์โฆษณาที่สร้างโดยระบบก่อนคลิป
+streaming.tonytonychopper.com##.overlay[id^="overlay-"]
+
+! สำรอง: กดข้ามโฆษณาทั้งสองตามลำดับ เมื่อปุ่มมีคำสั่งข้ามพร้อมใช้งาน
+! บน iPhone ต้องเปิดการป้องกันขั้นสูงเพื่อใช้กฎสคริปต์
+streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '#skip-0[onclick], #skip-1[onclick]', '', '', '', '120')
+
+! คงสคริปต์สร้างตัวเล่น ปุ่มรีโหลด ปุ่มเปลี่ยนตอน และปุ่มเลือกเซิร์ฟเวอร์ไว้
+! ทดสอบจำลองเหตุการณ์เล่นโฆษณาผิดพลาดสองครั้ง: เข้าสู่เฟรมเนื้อหาได้
+! ยังไม่ได้ทดสอบด้วย AdGuard จริง: ปลายทางหลักหมดเวลา สำรองแสดงปิดปรับปรุง
+! ยังไม่เพิ่มกฎปิดองค์ประกอบในตัวเล่นปลายทางที่ตรวจยืนยันไม่ได้
+
+! ===================================================================
+! ตัวเล่นสำรอง: player.marimo.me — แก้ป๊อปอัปเมื่อกดเล่น
+! พบสคริปต์สลับแหล่งโฆษณา 4 แห่งเมื่อแหล่งก่อนหน้าถูกบล็อก
+! บล็อกเฉพาะสคริปต์โฆษณา ไม่บล็อกตัวเล่นและไฟล์คลิป
+! ===================================================================
+||blockadsnot.com/uswds.min.js$script,domain=player.marimo.me
+||dnhfi5nn2dt67.cloudfront.net/bag.min.js$script,domain=player.marimo.me
+||ddrsemxv.com/s.js$script,domain=player.marimo.me
+||qvorcqfon.com/eidl.js$script,domain=player.marimo.me
+
+streaming.tonytonychopper.com##.overlay
+streaming.tonytonychopper.com##.skip-btn
+abysscdn.com###overlay
+||decafeligiblyhad.com^$popup
+||decafeligiblyhad.com^$document
+
+! Block popups
+*$popup,domain=kingofshojo.com
+
+! Block external scripts and embedded frames
+*$script,third-party,domain=kingofshojo.com
+*$subdocument,domain=kingofshojo.com
+
+! Hide common embedded ad containers
+kingofshojo.com##iframe
+kingofshojo.com##.adsbygoogle
+kingofshojo.com##[id^="google_ads"]
+kingofshojo.com##[id^="div-gpt-ad"]
+kingofshojo.com##.ad-container
+kingofshojo.com##.ad-wrapper
+kingofshojo.com##.advertisement
+
+! ซ่อนแบนเนอร์โฆษณา 13 จุดที่ตรวจพบ
+123-hda.com##p:has(> a[href^="https://ibit.ly/"] > img)
+123-hda.com##a[href^="https://ibit.ly/"]
+
+! บล็อกการโหลดภาพแบนเนอร์
+||123-hda.com/wp-content/uploads/*/728x*.gif$image
+
+! บล็อกป๊อปอัปจากหน้าเว็บและเครื่องเล่นที่ฝัง
+*$popup,domain=123-hda.com|24playerhd.com
