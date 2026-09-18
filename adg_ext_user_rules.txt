@@ -403,7 +403,6 @@ onlysubthai.com##a[href^="https://cutt.ly/"]
 onlysubthai.com##a[href^="https://t.ly/"]
 ||image.cdend.com/wp-content/uploads/2026/08/500x500-SBogool_popup.gif$domain=onlysubthai.com
 javwow.com,onlysubthai.com#%#//scriptlet('prevent-window-open')
-*$popup,domain=javwow.com|onlysubthai.com
 javwow.com##.banner-grid-container
 javwow.com##.banner-item
 javwow.com###ads_04
