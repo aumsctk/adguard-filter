@@ -1,18 +1,11 @@
-! ส่วนกลาง: บล็อกการเชื่อมต่อไปยังแหล่งโฆษณา ใช้กับทุกเว็บไซต์
 ||image.cdend.com^
 ||ibit.ly^
 ||debet.win^
 ||regem.bet^
 ||cutt.ly/UFANICE*^
-
-! ส่วนกลาง: ซ่อนลิงก์และองค์ประกอบโฆษณาที่ตรงกับเงื่อนไขในทุกเว็บไซต์
 ##a[href*="cutt.ly/UFANICE"]
 ##a:has(img[src*="UFANICE"])
 ##a:has(.absolute.top-2.left-2 > span:contains(AD))
-
-! กลุ่มเว็บไซต์มังงะและอนิเมะ
-
-! เว็บไซต์: go-manga.com
 go-manga.com##.center_gomanga
 go-manga.com##.center_gomangafixsize
 go-manga.com##.center_gomangasolo
@@ -20,10 +13,8 @@ go-manga.com##.center_gomangaza
 go-manga.com###sticky-bottom
 go-manga.com###sticky-bottom2
 go-manga.com###sticky-bottom3
-go-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
+go-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
 ||go-manga.com/link_to.php^
-
-! เว็บไซต์: up-manga.com
 up-manga.com##.center_upmanga
 up-manga.com##.center_upmanga3
 up-manga.com##.center_upmangaza
@@ -34,15 +25,13 @@ up-manga.com###sticky-bottom
 up-manga.com###sticky-bottom2
 up-manga.com###sticky-bottom3
 up-manga.com##div[id^="sticky-bottom"]
-up-manga.com##body:style(background-image: none !important; background-color: #1a1a1a !important;)
+up-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
 up-manga.com##a[href^="/link_to.php"]
 up-manga.com##a[href*="ibit.ly"]
 up-manga.com##a[href*="cutt.ly"]
 up-manga.com##a[href*="pgk44"]
 up-manga.com##a[href*="ufabet"]
 ||up-manga.com/link_to.php^
-
-! เว็บไซต์: animeruka.com
 animeruka.com###animerukaads1
 animeruka.com###animerukaads2
 animeruka.com###animerukaads3
@@ -60,9 +49,6 @@ animeruka.com##.module_home_x:has(#animerukaads1)
 animeruka.com##center:has(#animerukaads4)
 animeruka.com##center:has(#animerukaads5)
 ||animeruka.com/ads/$image,domain=animeruka.com
-||animeruka.com^$script,contain=ai_insert
-
-! เว็บไซต์: anime-masterx.com
 anime-masterx.com##.banner-close
 anime-masterx.com##div[id="slider-b"]
 anime-masterx.com##.img-responsive2
@@ -75,8 +61,6 @@ anime-masterx.com##a[href*="ufabet"]
 anime-masterx.com##a[href*="sexygame"]
 anime-masterx.com##a[href*="pgk44"]
 anime-masterx.com#%#//scriptlet("abort-on-property-write", "document.documentElement.scrollTop")
-
-! เว็บไซต์: mangasuper.com
 mangasuper.com##div[id^="sticky-ads-bottom"]
 mangasuper.com##div[id="block-9"]
 mangasuper.com##div[id="block-10"]
@@ -85,8 +69,6 @@ mangasuper.com##a[href^="/link_to.php"]
 mangasuper.com##a[href*="ibit.ly"]
 mangasuper.com##a[href*="pokbet"]
 mangasuper.com##a[href*="debet"]
-
-! เว็บไซต์: cartoon-th.com
 cartoon-th.com##.kln
 cartoon-th.com##.dessert-frame
 cartoon-th.com##.tt_bfx
@@ -99,14 +81,10 @@ cartoon-th.com##a[href*="sinbet"]
 cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
-
-! เว็บไซต์: mangaisekaithai.com
 mangaisekaithai.com##.ads
 mangaisekaithai.com##.footer-ads
 mangaisekaithai.com##.c-ads
 mangaisekaithai.com##.ad
-
-! เว็บไซต์: slow-manga.com
 slow-manga.com##.header-ads-section
 slow-manga.com##img[src*="728x200"]
 slow-manga.com##a[href*="ibit.ly"]
@@ -115,8 +93,6 @@ slow-manga.com##a[href*="lalika"]
 slow-manga.com##a[href*="sexy365bet"]
 slow-manga.com##a[href*="mahagame66"]
 slow-manga.com##a[href*="ufazeed"]
-
-! เว็บไซต์: reborntrans.com
 reborntrans.com##.manga-eagle-ad-widget-instance
 reborntrans.com##.widget-header-area
 reborntrans.com##.manga-eagle-ad-card
@@ -138,8 +114,6 @@ reborntrans.com###manga_eagle_ad_widget-21
 reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
-
-! เว็บไซต์: speed-manga.net
 speed-manga.net##.dessert-frame
 speed-manga.net##.tt_bfx
 speed-manga.net##.tt_bfxl
@@ -149,8 +123,6 @@ speed-manga.net###i8cqsek3wi7
 speed-manga.net##.mlb
 speed-manga.net##.kln
 speed-manga.net###c8029w01
-
-! เว็บไซต์: sing-manga.com
 sing-manga.com##.ads
 sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
 sing-manga.com##img[src*="image.cdend.com"]
@@ -158,8 +130,6 @@ sing-manga.com##a[href*="ibit.ly"]
 sing-manga.com##a[href*="huaylike"]
 sing-manga.com##a[href*="lalikabet"]
 sing-manga.com##a[href*="1stgame"]
-
-! เว็บไซต์: black-manga.com
 black-manga.com##.center_blackmangaza
 black-manga.com##.center_blackmanga
 black-manga.com##.center_blackmangasolo
@@ -171,13 +141,9 @@ black-manga.com##.mobile-float-right
 black-manga.com##.mobile-float-left
 black-manga.com##.floating_content
 black-manga.com##a[href^="/link_to.php"]
-
-! เว็บไซต์: reapertrans.com
 reapertrans.com##.sort-ban a
 reapertrans.com##a[href*="ibit.ly"]
 reapertrans.com##div[id^="ads_"]
-
-! เว็บไซต์: nano-manga.com
 nano-manga.com###block-5
 nano-manga.com###block-6
 nano-manga.com###sticky-ads-bottom
@@ -185,8 +151,6 @@ nano-manga.com###sticky-ads-bottom2
 nano-manga.com###sticky-ads-bottom3
 nano-manga.com##a[href^="/link_to.php?url="]
 ||nano-manga.com/link_to.php^
-
-! เว็บไซต์: fairyanime.net, streaming.tonytonychopper.com, player.marimo.me
 fairyanime.net##.kosana-banner
 fairyanime.net##a:has(> img.kosana-banner)
 fairyanime.net##.adsbygoogle
@@ -201,11 +165,11 @@ fairyanime.net##[id^="floating-banner-container"]
 ||banner.tonytonychopper.com^$image,domain=fairyanime.net
 ||premiumvertising.com^$domain=fairyanime.net
 ||adsco.re^$domain=fairyanime.net
-*$popup,domain=fairyanime.net
-||ibit.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
-||cutt.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
-||rebrand.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
-||t.ly^$popup,domain=fairyanime.net|streaming.tonytonychopper.com
+fairyanime.net#%#//scriptlet('prevent-window-open')
+||ibit.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||cutt.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||rebrand.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||t.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
 ||cdend.com/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=streaming.tonytonychopper.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/hydra888.mp4$domain=streaming.tonytonychopper.com
 streaming.tonytonychopper.com##.overlay[id^="overlay-"]
@@ -216,9 +180,7 @@ streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '#skip-0[on
 ||dnhfi5nn2dt67.cloudfront.net/bag.min.js$script,domain=player.marimo.me
 ||ddrsemxv.com/s.js$script,domain=player.marimo.me
 ||qvorcqfon.com/eidl.js$script,domain=player.marimo.me
-
-! เว็บไซต์: kingofshojo.com
-*$popup,domain=kingofshojo.com
+kingofshojo.com#%#//scriptlet('prevent-window-open')
 *$script,third-party,domain=kingofshojo.com
 *$subdocument,domain=kingofshojo.com
 kingofshojo.com##iframe
@@ -228,11 +190,6 @@ kingofshojo.com##[id^="div-gpt-ad"]
 kingofshojo.com##.ad-container
 kingofshojo.com##.ad-wrapper
 kingofshojo.com##.advertisement
-
-
-! กลุ่มเว็บไซต์หนัง ซีรีส์ และเว็บไซต์อื่น ๆ
-
-! เว็บไซต์: goseries4k.com
 goseries4k.com##.vipx-grid
 goseries4k.com##.vipx-item
 goseries4k.com##.list-ads
@@ -240,11 +197,9 @@ goseries4k.com###pm-dessert
 goseries4k.com##.vipx-item--floating
 goseries4k.com##.action-hide
 goseries4k.com##aside#rightbar
-goseries4k.com##body:style(background-image: none !important; background-color: #151515 !important;)
+goseries4k.com#$#body { background-image: none !important; background-color: #151515 !important; }
 ||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
-||goseries4k.com^$popup
-
-! เว็บไซต์: 25-hd.com
+goseries4k.com#%#//scriptlet('prevent-window-open')
 25-hd.com##.main-banner
 25-hd.com##.banner-f-left-1
 25-hd.com##.banner-f-right-1
@@ -254,38 +209,26 @@ goseries4k.com##body:style(background-image: none !important; background-color: 
 25-hd.com##.banner-content-center
 25-hd.com##.player-promo-box
 25-hd.com##.banner
-
-! เว็บไซต์: xn--l3c0azab5a2gta.com
 xn--l3c0azab5a2gta.com##.ads
 xn--l3c0azab5a2gta.com##.fb_iframe_widget
 xn--l3c0azab5a2gta.com##div#fb-root
-
-! เว็บไซต์: liquipedia.net
 liquipedia.net###top-ad
 liquipedia.net###sidebar-ad
 liquipedia.net##.content-ad-block
 liquipedia.net##.content-ad
 liquipedia.net##.dropdown-betting-ad-button
 liquipedia.net##div[id^="div-gpt-ad"]
-
-! เว็บไซต์: xn--12cl7cd0bo9gf0s.com
 xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
 xn--12cl7cd0bo9gf0s.com##a[href*="ambmax.pro"]
 xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
 ||ambmax.pro^
 ||superslot.asia^
-
-! เว็บไซต์: 9nung.com
 9nung.com##aside.adsnon-zone
 9nung.com##aside[aria-label="advertisement"]
 ||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
-
-! เว็บไซต์: rongyok.com
 rongyok.com##[id^="content-modal-overlay"]
 rongyok.com##[id^="loadingMessage"]
-rongyok.com##+js(set, isDisplayingContent, false)
-
-! เว็บไซต์: movie911hd.com
+rongyok.com#%#//scriptlet('set-constant', 'isDisplayingContent', 'false')
 ||movie911hd.com/ads/
 movie911hd.com##.cg-ad
 movie911hd.com###ui-xheader
@@ -302,15 +245,11 @@ movie911hd.com##.signup_button
 ||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
 ||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
-
-! เว็บไซต์: mawtoload.com
 ||cleverwebserver.com^$domain=mawtoload.com
 ||traffmovie.com^$domain=mawtoload.com
 ||buddievidian.com^$domain=mawtoload.com
-||disleksiaindonesia.com^$popup,domain=mawtoload.com
-mawtoload.com#%#//scriptlet('set-constant', '__dlInit__', 'true')
-
-! เว็บไซต์: hubserieshds.com & nanoplayer.zip
+||disleksiaindonesia.com^$domain=mawtoload.com
+mawtoload.com#%#//scriptlet('set-constant', 'dlInit', 'true')
 hubserieshds.com##.bannerrow
 hubserieshds.com###bt-ads
 hubserieshds.com###bt-ads-mini
@@ -324,8 +263,6 @@ nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({'
 ||nanoplayer.zip/video/supreme.mp4
 ||nanoplayer.zip/video/we356.mp4
 ||nanoplayer.zip/video/me356.mp4
-
-! เว็บไซต์: v8-hdmovie.com & stream1689.com
 v8-hdmovie.com##.row-kodsana-container
 v8-hdmovie.com##.row-kodsana
 v8-hdmovie.com###ads-all
@@ -334,8 +271,8 @@ v8-hdmovie.com###adRight
 v8-hdmovie.com###adBottom
 v8-hdmovie.com##a[href*="ibit.ly"]:has(img)
 v8-hdmovie.com##a[href*="c301.cc"]:has(img)
-||ibit.ly^$popup,domain=v8-hdmovie.com|stream1689.com
-||c301.cc^$popup,domain=v8-hdmovie.com
+||ibit.ly^$domain=v8-hdmovie.com|stream1689.com
+||c301.cc^$domain=v8-hdmovie.com
 ||stream1689.com/v4/js/stream1688/ads-popup.js$script
 stream1689.com###adPopup
 stream1689.com###adCloseBtn
@@ -344,8 +281,6 @@ stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', 
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
-
-! เว็บไซต์: applejr.net & applejr.xyz
 applejr.net##.library-ad
 ||decreasestreet.com^$domain=applejr.net|applejr.xyz
 ||gpcasla.org^$domain=applejr.net|applejr.xyz
@@ -353,47 +288,38 @@ applejr.xyz###adsterra_section
 applejr.xyz###top_ads
 applejr.xyz###middle_ads2
 applejr.xyz##div[id^="container-1a8d25c81aed7c54407186d56a589c11"]
-
-! เว็บไซต์: khoindvn.io.vn
 ||wingsmob.com^$domain=khoindvn.io.vn
 ||dc9xwpjprguup.cloudfront.net^$domain=khoindvn.io.vn
 ||portalfluently.com^$domain=khoindvn.io.vn
 ||disleksiaindonesia.com^$domain=khoindvn.io.vn
-||disleksiaindonesia.com^$popup,domain=khoindvn.io.vn
 khoindvn.io.vn##a[href*="//disleksiaindonesia.com/"]
 khoindvn.io.vn##p:has(> a[href="https://muacert.com"])
 khoindvn.io.vn##a[href="https://muacert.com"]
-
-! เว็บไซต์: dunung24.com
 dunung24.com##figure:has(a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"]))
 dunung24.com##a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"])
 dunung24.com###ssip-popup
-||ibit.ly^$popup,domain=dunung24.com
-||t.ly^$popup,domain=dunung24.com
-||upwin.me^$popup,domain=dunung24.com
-||the88top.com^$popup,domain=dunung24.com
-||wy88.bet^$popup,domain=dunung24.com
-||ck88.asia^$popup,domain=dunung24.com
-||888paruay.com^$popup,domain=dunung24.com
-||miracle55.net^$popup,domain=dunung24.com
-||123playx.com^$popup,domain=dunung24.com
-||bacara8.com^$popup,domain=dunung24.com
-||xn--72c7cj5azb7hk.com^$popup,domain=dunung24.com
+||ibit.ly^$domain=dunung24.com
+||t.ly^$domain=dunung24.com
+||upwin.me^$domain=dunung24.com
+||the88top.com^$domain=dunung24.com
+||wy88.bet^$domain=dunung24.com
+||ck88.asia^$domain=dunung24.com
+||888paruay.com^$domain=dunung24.com
+||miracle55.net^$domain=dunung24.com
+||123playx.com^$domain=dunung24.com
+||bacara8.com^$domain=dunung24.com
+||xn--72c7cj5azb7hk.com^$domain=dunung24.com
 dunung24.com#%#//scriptlet('trusted-replace-node-text', 'script', 'jwpaFrame', 'function prepare(target){', 'function prepare(target){return;')
 ||bacara8.com/sbogool2/$domain=dunung24.com
 ||bacara8.com/sexy365/$domain=dunung24.com
 dunung24.com##.jwpa-video, .jwpa-start, .jwpa-skip, .jwpa-signup, .jwpa-count
-dunung24.com##.jwpa-box > .jwpa-frame:style(visibility: visible !important;)
-
-! เว็บไซต์: 123-hda.com & 24playerhd.com
+dunung24.com#$#.jwpa-box > .jwpa-frame { visibility: visible !important; }
 123-hda.com##p:has(> a[href^="https://ibit.ly/"] > img)
 123-hda.com##a[href^="https://ibit.ly/"]
 ||123-hda.com/wp-content/uploads/*/728x*.gif$image
-*$popup,domain=123-hda.com|24playerhd.com
+123-hda.com,24playerhd.com#%#//scriptlet('prevent-window-open')
 abysscdn.com###overlay
-||decafeligiblyhad.com^$popup
 ||decafeligiblyhad.com^$document
-
 ||onlysubthai.com/ad-data/
 ||onlysubthai.com/video/ufa11k.mp4
 onlysubthai.com##.banner-ads-layer
@@ -424,4 +350,3 @@ javwow.com##a[href*=".webadorsite.com/"]
 ||550ww.ing^$domain=javwow.com|onlysubthai.com
 ||sexy456bet.com^$domain=javwow.com|onlysubthai.com
 ||webadorsite.com^$domain=javwow.com|onlysubthai.com
-
