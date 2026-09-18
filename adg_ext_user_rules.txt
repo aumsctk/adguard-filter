@@ -394,8 +394,8 @@ abysscdn.com###overlay
 ||decafeligiblyhad.com^$popup
 ||decafeligiblyhad.com^$document
 
-||onlysubthai.com/ad-data/$domain=onlysubthai.com
-||onlysubthai.com/video/ufa11k.mp4$domain=onlysubthai.com
+||onlysubthai.com/ad-data/
+||onlysubthai.com/video/ufa11k.mp4
 onlysubthai.com##.banner-ads-layer
 onlysubthai.com##.banner-ads-close-all
 onlysubthai.com##a[href^="https://ibit.ly/"]
@@ -424,3 +424,4 @@ javwow.com##a[href*=".webadorsite.com/"]
 ||550ww.ing^$domain=javwow.com|onlysubthai.com
 ||sexy456bet.com^$domain=javwow.com|onlysubthai.com
 ||webadorsite.com^$domain=javwow.com|onlysubthai.com
+
