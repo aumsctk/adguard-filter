@@ -200,15 +200,38 @@ goseries4k.com##aside#rightbar
 goseries4k.com#$#body { background-image: none !important; background-color: #151515 !important; }
 ||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
 goseries4k.com#%#//scriptlet('prevent-window-open')
+25-hd.com,zmdb.net#%#//scriptlet('prevent-window-open')
+zmdb.net#%#//scriptlet('trusted-replace-node-text', 'script', 'aff5.mammoth88.cc', '"enabled":true,"queue"', '"enabled":false,"queue"')
+||aff5.mammoth88.cc^
+||media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenRjOW9pMzZmYXg3NWYyaWNhajZwdjI1YjF5aWllNGFrZHN6bDg1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dcLzmQAOrSW4K90Q2J/giphy.gif$image,domain=zmdb.net
+zmdb.net##.backdrop.svelte-1fmwwco
+zmdb.net##.gate.svelte-7egakv
+25-hd.com,zmdb.net##a[href^="https://aff5.mammoth88.cc/"]
+25-hd.com,zmdb.net##a[href^="http://aff5.mammoth88.cc/"]
+25-hd.com,zmdb.net##a[href^="//aff5.mammoth88.cc/"]
+||ibit.ly^$domain=25-hd.com|zmdb.net
+||t.ly^$domain=25-hd.com|zmdb.net
+||abm96.com^$domain=25-hd.com|zmdb.net
+||kamo99.com^$domain=25-hd.com|zmdb.net
+||regem.bet^$domain=25-hd.com|zmdb.net
+||ruayy.com^$domain=25-hd.com|zmdb.net
+||xn--365-1kl1e3c8a5a9q.fan^$domain=25-hd.com|zmdb.net
 25-hd.com##.main-banner
-25-hd.com##.banner-f-left-1
-25-hd.com##.banner-f-right-1
-25-hd.com##.banner-float
 25-hd.com##.sidebar-banner-left
 25-hd.com##.sidebar-banner-right
 25-hd.com##.banner-content-center
+25-hd.com##.banner-f-left-1
+25-hd.com##.banner-f-right-1
+25-hd.com##.banner-float
 25-hd.com##.player-promo-box
-25-hd.com##.banner
+25-hd.com##a[href*="ibit.ly"]
+25-hd.com##a[href*="t.ly"]
+25-hd.com##a[href*="abm96.com"]
+25-hd.com##a[href*="kamo99.com"]
+25-hd.com##a[href*="regem.bet"]
+25-hd.com##a[href*="ruayy.com"]
+25-hd.com##a[href*="xn--365-1kl1e3c8a5a9q.fan"]
+25-hd.com###primary > div.container-index > div.idx-st-content:first-child > div.content-category.article:first-child
 xn--l3c0azab5a2gta.com##.ads
 xn--l3c0azab5a2gta.com##.fb_iframe_widget
 xn--l3c0azab5a2gta.com##div#fb-root
