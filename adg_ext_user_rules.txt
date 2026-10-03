@@ -14,6 +14,17 @@ go-manga.com###sticky-bottom
 go-manga.com###sticky-bottom2
 go-manga.com###sticky-bottom3
 go-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
+! บล็อกแบนเนอร์โฆษณากลางหน้าเว็บ Go-Manga
+go-manga.com##.center_gomanga
+go-manga.com##.center_gomangaza
+go-manga.com##.center_gomangafixsize
+
+! บล็อกป็อปอัปโฆษณาแบบลอยที่ติดขอบจอด้านล่าง ซ้าย และขวา
+go-manga.com###sticky-bottom
+go-manga.com###sticky-bottom2
+go-manga.com###sticky-bottom3
+go-manga.com##.floating_content
+
 ||go-manga.com/link_to.php^
 up-manga.com##.center_upmanga
 up-manga.com##.center_upmanga3
