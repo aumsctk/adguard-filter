@@ -1,57 +1,207 @@
+! กฎบล็อกโฆษณารวม / AdGuard User rules
+! รวมจากไฟล์แนบและข้อความที่ให้มา วันที่ 2026-10-09
+! ลบเฉพาะกฎที่ซ้ำตรงกัน คงข้อความและขอบเขตของกฎเดิม
+! กฎส่วนกลางมีผลทุกเว็บไซต์; กฎร่วมหลายเว็บไซต์แสดงโดเมนที่ใช้ร่วมกัน
+! จัดหมวดหมู่เท่านั้น ยังไม่ได้ทดสอบกฎใน AdGuard ที่ติดตั้งจริง
+! i-LOADZONE: ตรวจสอบเดิม 2026-10-09; การบล็อกโฆษณาในตัวเล่นฝังยังไม่ยืนยัน
+! i-LOADZONE: ซ่อนเฉพาะ .ilz-ads-popup__frame; อย่าซ่อน .ilz-ads-popup ทั้งหมด เพราะมีปุ่มดาวน์โหลดจริง
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎส่วนกลาง (มีผลทุกเว็บไซต์)
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
 ||image.cdend.com^
 ||ibit.ly^
 ||debet.win^
 ||regem.bet^
 ||cutt.ly/UFANICE*^
-##a[href*="cutt.ly/UFANICE"]
+||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
+||aff5.mammoth88.cc^
+||ambmax.pro^
+||superslot.asia^
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4
+||decafeligiblyhad.com^$document
+||i-loadzone.com/wp-content/themes/dark-download-fast/assets/js/ilz-ad-dock-right.js$script
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
 ##a:has(img[src*="UFANICE"])
 ##a:has(.absolute.top-2.left-2 > span:contains(AD))
-go-manga.com##.center_gomanga
-go-manga.com##.center_gomangafixsize
-go-manga.com##.center_gomangasolo
-go-manga.com##.center_gomangaza
-go-manga.com###sticky-bottom
-go-manga.com###sticky-bottom2
-go-manga.com###sticky-bottom3
-go-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
-! บล็อกแบนเนอร์โฆษณากลางหน้าเว็บ Go-Manga
-go-manga.com##.center_gomanga
-go-manga.com##.center_gomangaza
-go-manga.com##.center_gomangafixsize
 
-! บล็อกป็อปอัปโฆษณาแบบลอยที่ติดขอบจอด้านล่าง ซ้าย และขวา
-go-manga.com###sticky-bottom
-go-manga.com###sticky-bottom2
-go-manga.com###sticky-bottom3
-go-manga.com##.floating_content
+! หมวด: ป็อปอัปและป็อปอันเดอร์
+||up-manga.com^$popup,popunder
 
-||go-manga.com/link_to.php^
-up-manga.com##.center_upmanga
-up-manga.com##.center_upmanga3
-up-manga.com##.center_upmangaza
-up-manga.com##.center_upmangaza3
-up-manga.com##.center_upmangasolo
-up-manga.com##.center_upmangasolo3
-up-manga.com###sticky-bottom
-up-manga.com###sticky-bottom2
-up-manga.com###sticky-bottom3
-up-manga.com##div[id^="sticky-bottom"]
-up-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
-up-manga.com##a[href^="/link_to.php"]
-up-manga.com##a[href*="ibit.ly"]
-up-manga.com##a[href*="cutt.ly"]
-up-manga.com##a[href*="pgk44"]
-up-manga.com##a[href*="ufabet"]
-||up-manga.com/link_to.php^
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+##a[href*="cutt.ly/UFANICE"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: 123-hda.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||123-hda.com/wp-content/uploads/*/728x*.gif$image
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+123-hda.com##p:has(> a[href^="https://ibit.ly/"] > img)
+123-hda.com##a[href^="https://ibit.ly/"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: 25-hd.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+25-hd.com##.banner-float
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+25-hd.com##.main-banner
+25-hd.com##.sidebar-banner-left
+25-hd.com##.sidebar-banner-right
+25-hd.com##.banner-content-center
+25-hd.com##.banner-f-left-1
+25-hd.com##.banner-f-right-1
+25-hd.com##.player-promo-box
+25-hd.com###primary > div.container-index > div.idx-st-content:first-child > div.content-category.article:first-child
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+25-hd.com##a[href*="ibit.ly"]
+25-hd.com##a[href*="t.ly"]
+25-hd.com##a[href*="abm96.com"]
+25-hd.com##a[href*="kamo99.com"]
+25-hd.com##a[href*="regem.bet"]
+25-hd.com##a[href*="ruayy.com"]
+25-hd.com##a[href*="xn--365-1kl1e3c8a5a9q.fan"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: 9nung.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+9nung.com##aside.adsnon-zone
+9nung.com##aside[aria-label="advertisement"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: 123-hda.com, 24playerhd.com
+! ============================================================
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+123-hda.com,24playerhd.com#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: 25-hd.com, zmdb.net
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||ibit.ly^$domain=25-hd.com|zmdb.net
+||t.ly^$domain=25-hd.com|zmdb.net
+||abm96.com^$domain=25-hd.com|zmdb.net
+||kamo99.com^$domain=25-hd.com|zmdb.net
+||regem.bet^$domain=25-hd.com|zmdb.net
+||ruayy.com^$domain=25-hd.com|zmdb.net
+||xn--365-1kl1e3c8a5a9q.fan^$domain=25-hd.com|zmdb.net
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+25-hd.com,zmdb.net##a[href^="https://aff5.mammoth88.cc/"]
+25-hd.com,zmdb.net##a[href^="http://aff5.mammoth88.cc/"]
+25-hd.com,zmdb.net##a[href^="//aff5.mammoth88.cc/"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+25-hd.com,zmdb.net#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: applejr.net, applejr.xyz
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||decreasestreet.com^$domain=applejr.net|applejr.xyz
+||gpcasla.org^$domain=applejr.net|applejr.xyz
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: fairyanime.net, streaming.tonytonychopper.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||ibit.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||cutt.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||rebrand.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+||t.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: javwow.com, onlysubthai.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||ibit.ly^$domain=javwow.com|onlysubthai.com
+||cutt.ly^$domain=javwow.com|onlysubthai.com
+||t.ly^$domain=javwow.com|onlysubthai.com
+||chokbet.now^$domain=javwow.com|onlysubthai.com
+||debetthailand.win^$domain=javwow.com|onlysubthai.com
+||poseidonbet-pos.com^$domain=javwow.com|onlysubthai.com
+||550ww.ing^$domain=javwow.com|onlysubthai.com
+||sexy456bet.com^$domain=javwow.com|onlysubthai.com
+||webadorsite.com^$domain=javwow.com|onlysubthai.com
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+javwow.com,onlysubthai.com#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: กฎร่วมหลายเว็บไซต์: v8-hdmovie.com, stream1689.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||ibit.ly^$domain=v8-hdmovie.com|stream1689.com
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: abysscdn.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+abysscdn.com###overlay
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: anime-masterx.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+anime-masterx.com##.banner-close
+anime-masterx.com##div[id="slider-b"]
+anime-masterx.com##.img-responsive2
+anime-masterx.com##a:has(.img-responsive2)
+anime-masterx.com##p.center_lnwphp
+anime-masterx.com##.col-md-12 > center > p
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+anime-masterx.com##a[href*="ibit.ly"]
+anime-masterx.com##a[href*="cutt.ly"]
+anime-masterx.com##a[href*="ufabet"]
+anime-masterx.com##a[href*="sexygame"]
+anime-masterx.com##a[href*="pgk44"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+anime-masterx.com#%#//scriptlet("abort-on-property-write", "document.documentElement.scrollTop")
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: animeruka.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+animeruka.com###box-footer-fix
+animeruka.com###box-side-l
+animeruka.com###box-side-r
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||animeruka.com/ads/$image,domain=animeruka.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
 animeruka.com###animerukaads1
 animeruka.com###animerukaads2
 animeruka.com###animerukaads3
 animeruka.com###animerukaads4
 animeruka.com###animerukaads5
 animeruka.com##.promo728
-animeruka.com###box-footer-fix
-animeruka.com###box-side-l
-animeruka.com###box-side-r
 animeruka.com##.animeruka-banner
 animeruka.com##.module_home_x > center
 animeruka.com##.code-block
@@ -59,58 +209,487 @@ animeruka.com##.code-block-default
 animeruka.com##.module_home_x:has(#animerukaads1)
 animeruka.com##center:has(#animerukaads4)
 animeruka.com##center:has(#animerukaads5)
-||animeruka.com/ads/$image,domain=animeruka.com
-anime-masterx.com##.banner-close
-anime-masterx.com##div[id="slider-b"]
-anime-masterx.com##.img-responsive2
-anime-masterx.com##a:has(.img-responsive2)
-anime-masterx.com##p.center_lnwphp
-anime-masterx.com##.col-md-12 > center > p
-anime-masterx.com##a[href*="ibit.ly"]
-anime-masterx.com##a[href*="cutt.ly"]
-anime-masterx.com##a[href*="ufabet"]
-anime-masterx.com##a[href*="sexygame"]
-anime-masterx.com##a[href*="pgk44"]
-anime-masterx.com#%#//scriptlet("abort-on-property-write", "document.documentElement.scrollTop")
-mangasuper.com##div[id^="sticky-ads-bottom"]
-mangasuper.com##div[id="block-9"]
-mangasuper.com##div[id="block-10"]
-mangasuper.com##.sticky-close
-mangasuper.com##a[href^="/link_to.php"]
-mangasuper.com##a[href*="ibit.ly"]
-mangasuper.com##a[href*="pokbet"]
-mangasuper.com##a[href*="debet"]
-cartoon-th.com##.kln
-cartoon-th.com##.dessert-frame
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: applejr.net
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+applejr.net##.library-ad
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: applejr.xyz
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+applejr.xyz###adsterra_section
+applejr.xyz###top_ads
+applejr.xyz###middle_ads2
+applejr.xyz##div[id^="container-1a8d25c81aed7c54407186d56a589c11"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: black-manga.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+black-manga.com###sticky-bottom
+black-manga.com###sticky-bottom2
+black-manga.com###sticky-bottom3
+black-manga.com##.mobile-float-right
+black-manga.com##.mobile-float-left
+black-manga.com##.floating_content
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+black-manga.com##.center_blackmangaza
+black-manga.com##.center_blackmanga
+black-manga.com##.center_blackmangasolo
+black-manga.com##.center_blackmangafixsize
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+black-manga.com##a[href^="/link_to.php"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: blog.i-loadzone.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+blog.i-loadzone.com##.ads22
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: cartoon-th.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
 cartoon-th.com##.tt_bfx
-cartoon-th.com##div[id="f5mofwww"]
 cartoon-th.com##.tt_bfxl
 cartoon-th.com##.tt_bfxr
 cartoon-th.com##.tt_bfxb
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+cartoon-th.com##.kln
+cartoon-th.com##.dessert-frame
+cartoon-th.com##div[id="f5mofwww"]
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
 cartoon-th.com##a[href*="88club"]
 cartoon-th.com##a[href*="sinbet"]
 cartoon-th.com##a[href*="ufa"]
 cartoon-th.com##a[href*="regem.bet"]
 cartoon-th.com##a[href*="puntaek789"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: dunung24.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+dunung24.com###ssip-popup
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||ibit.ly^$domain=dunung24.com
+||t.ly^$domain=dunung24.com
+||upwin.me^$domain=dunung24.com
+||the88top.com^$domain=dunung24.com
+||wy88.bet^$domain=dunung24.com
+||ck88.asia^$domain=dunung24.com
+||888paruay.com^$domain=dunung24.com
+||miracle55.net^$domain=dunung24.com
+||123playx.com^$domain=dunung24.com
+||bacara8.com^$domain=dunung24.com
+||xn--72c7cj5azb7hk.com^$domain=dunung24.com
+||bacara8.com/sbogool2/$domain=dunung24.com
+||bacara8.com/sexy365/$domain=dunung24.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+dunung24.com##.jwpa-video, .jwpa-start, .jwpa-skip, .jwpa-signup, .jwpa-count
+
+! หมวด: พื้นหลังและรูปแบบการแสดงผล
+dunung24.com#$#.jwpa-box > .jwpa-frame { visibility: visible !important; }
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+dunung24.com##figure:has(a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"]))
+dunung24.com##a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"])
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+dunung24.com#%#//scriptlet('trusted-replace-node-text', 'script', 'jwpaFrame', 'function prepare(target){', 'function prepare(target){return;')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: fairyanime.net
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+fairyanime.net###floating-banner-container-left
+fairyanime.net##[id^="floating-banner-container"]
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||banner.tonytonychopper.com^$image,domain=fairyanime.net
+||premiumvertising.com^$domain=fairyanime.net
+||adsco.re^$domain=fairyanime.net
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+fairyanime.net##.kosana-banner
+fairyanime.net##a:has(> img.kosana-banner)
+fairyanime.net##.adsbygoogle
+fairyanime.net##.ad-container
+fairyanime.net##.ad-banner
+fairyanime.net##.ads-container
+fairyanime.net##[id^="google_ads_iframe"]
+fairyanime.net##iframe[src*="doubleclick.net"]
+fairyanime.net##iframe[src*="googlesyndication.com"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+fairyanime.net#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: go-manga.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+go-manga.com###sticky-bottom
+go-manga.com###sticky-bottom2
+go-manga.com###sticky-bottom3
+go-manga.com##.floating_content
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||go-manga.com/link_to.php^
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+go-manga.com##.center_gomanga
+go-manga.com##.center_gomangafixsize
+go-manga.com##.center_gomangasolo
+go-manga.com##.center_gomangaza
+
+! หมวด: พื้นหลังและรูปแบบการแสดงผล
+go-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: goseries4k.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+goseries4k.com##.vipx-item--floating
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+goseries4k.com##.vipx-grid
+goseries4k.com##.vipx-item
+goseries4k.com##.list-ads
+goseries4k.com###pm-dessert
+goseries4k.com##.action-hide
+goseries4k.com##aside#rightbar
+
+! หมวด: พื้นหลังและรูปแบบการแสดงผล
+goseries4k.com#$#body { background-image: none !important; background-color: #151515 !important; }
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+goseries4k.com#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: hubserieshds.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||hubserieshds.com/banner/
+||hubserieshds.com/bframe.php^
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+hubserieshds.com##.bannerrow
+hubserieshds.com###bt-ads
+hubserieshds.com###bt-ads-mini
+hubserieshds.com##iframe.bframe
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+hubserieshds.com##a[href*="/go.php?u="]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: i-loadzone.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||push-sdk.com^$domain=i-loadzone.com
+||bellnewyork.org^$domain=i-loadzone.com
+||accountut.com^$domain=i-loadzone.com
+||llvpn.com^$domain=i-loadzone.com
+||fazedtriers.com^$domain=i-loadzone.com
+||sleevesbarbing.com^$domain=i-loadzone.com
+||warkedmalie.com^$domain=i-loadzone.com
+||letticolivean.com^$domain=i-loadzone.com
+||ey43.com^$domain=i-loadzone.com
+||malijolting.cfd^$domain=i-loadzone.com
+||mamshirt.com^$domain=i-loadzone.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+i-loadzone.com##.ilz-shopee-single-grid-mount
+i-loadzone.com##.ilz-shopee-grid
+i-loadzone.com##.galaksion-ad
+i-loadzone.com##.gadsc1
+i-loadzone.com##.gadsc2
+i-loadzone.com##.gadsc99
+i-loadzone.com##a.asioppsd
+i-loadzone.com##a[rel~="sponsored"]
+i-loadzone.com##.ilz-ads-popup__frame
+i-loadzone.com##iframe[srcdoc*="malijolting.cfd"]
+i-loadzone.com##div[style*="2147483646"]:has(iframe[srcdoc*="malijolting.cfd"])
+i-loadzone.com##html > iframe[style*="opacity: 0"][style*="position: fixed"]
+i-loadzone.com##.adsnow
+
+! หมวด: ป็อปอัปและป็อปอันเดอร์
+||ey43.com^$popup,domain=i-loadzone.com
+||s.shopee.co.th^$popup,domain=i-loadzone.com
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+i-loadzone.com##a[data-ilz-affiliate-router-server="1"]
+i-loadzone.com##a[href*="ilz_ads_manager_affiliate_go"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+i-loadzone.com#%#//scriptlet('prevent-window-open', '/shopee|ey43|ilz_ads_manager_affiliate|ilzGateAff|ilzWatchAff|ilzDownloadAff|ilzContentAff|ilzAdWin_/')
+i-loadzone.com#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopPromiseResolve')
+i-loadzone.com#%#//scriptlet('prevent-element-src-loading', 'script', '/push-sdk|bellnewyork|accountut|llvpn|sleevesbarbing|fazedtriers|warkedmalie|letticolivean|mamshirt/')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: info-meawtion.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||googlesyndication.com^$domain=info-meawtion.com
+||doubleclick.net^$domain=info-meawtion.com
+||googleadservices.com^$domain=info-meawtion.com
+||googletagservices.com^$domain=info-meawtion.com
+||geniee.jp^$domain=info-meawtion.com
+||genieessp.com^$domain=info-meawtion.com
+||sp-gn.com^$domain=info-meawtion.com
+||yads.c.yimg.jp^$domain=info-meawtion.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+info-meawtion.com##.ad-slot
+info-meawtion.com##ins.adsbygoogle
+info-meawtion.com##[id$="_wipead"]
+info-meawtion.com##iframe[id^="gnpbad_"]
+info-meawtion.com##iframe[src*="googlesyndication.com"]
+info-meawtion.com##iframe[src*="doubleclick.net"]
+info-meawtion.com##iframe[src*="genieessp.com"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+info-meawtion.com#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: javwow.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+javwow.com##.banner-grid-container
+javwow.com##.banner-item
+javwow.com###ads_04
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+javwow.com##a[href^="https://ibit.ly/"]
+javwow.com##a[href^="https://cutt.ly/"]
+javwow.com##a[href^="https://t.ly/"]
+javwow.com##a[href*="chokbet.now/"]
+javwow.com##a[href*="debetthailand.win/"]
+javwow.com##a[href*="poseidonbet-pos.com/"]
+javwow.com##a[href*="550ww.ing/"]
+javwow.com##a[href*="sexy456bet.com/"]
+javwow.com##a[href*=".webadorsite.com/"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: khoindvn.io.vn
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||wingsmob.com^$domain=khoindvn.io.vn
+||dc9xwpjprguup.cloudfront.net^$domain=khoindvn.io.vn
+||portalfluently.com^$domain=khoindvn.io.vn
+||disleksiaindonesia.com^$domain=khoindvn.io.vn
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+khoindvn.io.vn##a[href*="//disleksiaindonesia.com/"]
+khoindvn.io.vn##p:has(> a[href="https://muacert.com"])
+khoindvn.io.vn##a[href="https://muacert.com"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: kingofshojo.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+*$script,third-party,domain=kingofshojo.com
+*$subdocument,domain=kingofshojo.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+kingofshojo.com##iframe
+kingofshojo.com##.adsbygoogle
+kingofshojo.com##[id^="google_ads"]
+kingofshojo.com##[id^="div-gpt-ad"]
+kingofshojo.com##.ad-container
+kingofshojo.com##.ad-wrapper
+kingofshojo.com##.advertisement
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+kingofshojo.com#%#//scriptlet('prevent-window-open')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: liquipedia.net
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+liquipedia.net###top-ad
+liquipedia.net###sidebar-ad
+liquipedia.net##.content-ad-block
+liquipedia.net##.content-ad
+liquipedia.net##.dropdown-betting-ad-button
+liquipedia.net##div[id^="div-gpt-ad"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: mangaisekaithai.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
 mangaisekaithai.com##.ads
 mangaisekaithai.com##.footer-ads
 mangaisekaithai.com##.c-ads
 mangaisekaithai.com##.ad
-slow-manga.com##.header-ads-section
-slow-manga.com##img[src*="728x200"]
-slow-manga.com##a[href*="ibit.ly"]
-slow-manga.com##a[href*="8xbet"]
-slow-manga.com##a[href*="lalika"]
-slow-manga.com##a[href*="sexy365bet"]
-slow-manga.com##a[href*="mahagame66"]
-slow-manga.com##a[href*="ufazeed"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: mangasuper.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+mangasuper.com##div[id^="sticky-ads-bottom"]
+mangasuper.com##.sticky-close
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+mangasuper.com##div[id="block-9"]
+mangasuper.com##div[id="block-10"]
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+mangasuper.com##a[href^="/link_to.php"]
+mangasuper.com##a[href*="ibit.ly"]
+mangasuper.com##a[href*="pokbet"]
+mangasuper.com##a[href*="debet"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: mawtoload.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||cleverwebserver.com^$domain=mawtoload.com
+||traffmovie.com^$domain=mawtoload.com
+||buddievidian.com^$domain=mawtoload.com
+||disleksiaindonesia.com^$domain=mawtoload.com
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+mawtoload.com#%#//scriptlet('set-constant', 'dlInit', 'true')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: movie911hd.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+movie911hd.com###banner_popup
+movie911hd.com###banner_backdrop
+movie911hd.com###video_overlay_a
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||movie911hd.com/ads/
+||sv2.cdnbm168.xyz/media/ufagool.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
+||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+movie911hd.com##.cg-ad
+movie911hd.com###ui-xheader
+movie911hd.com###ui-xtop
+movie911hd.com###ui-xunder
+movie911hd.com###ui-xfooter
+movie911hd.com##.signup_button
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+movie911hd.com#%#//scriptlet('set-constant', 'bannerPopups', 'emptyArr')
+movie911hd.com#%#//scriptlet('set-constant', 'adSettings', 'emptyArr')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: nano-manga.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+nano-manga.com###sticky-ads-bottom
+nano-manga.com###sticky-ads-bottom2
+nano-manga.com###sticky-ads-bottom3
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||nano-manga.com/link_to.php^
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+nano-manga.com###block-5
+nano-manga.com###block-6
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+nano-manga.com##a[href^="/link_to.php?url="]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: nanoplayer.zip
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||nanoplayer.zip/video/supreme.mp4
+||nanoplayer.zip/video/we356.mp4
+||nanoplayer.zip/video/me356.mp4
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({', '"ads":', '"disabledAds":')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: onlysubthai.com
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||onlysubthai.com/ad-data/
+||onlysubthai.com/video/ufa11k.mp4
+||image.cdend.com/wp-content/uploads/2026/08/500x500-SBogool_popup.gif$domain=onlysubthai.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+onlysubthai.com##.banner-ads-layer
+onlysubthai.com##.banner-ads-close-all
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+onlysubthai.com##a[href^="https://ibit.ly/"]
+onlysubthai.com##a[href^="https://cutt.ly/"]
+onlysubthai.com##a[href^="https://t.ly/"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: player.marimo.me
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||blockadsnot.com/uswds.min.js$script,domain=player.marimo.me
+||dnhfi5nn2dt67.cloudfront.net/bag.min.js$script,domain=player.marimo.me
+||ddrsemxv.com/s.js$script,domain=player.marimo.me
+||qvorcqfon.com/eidl.js$script,domain=player.marimo.me
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: reapertrans.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+reapertrans.com##.sort-ban a
+reapertrans.com##div[id^="ads_"]
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+reapertrans.com##a[href*="ibit.ly"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: reborntrans.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+reborntrans.com###wbnn-bottom
+reborntrans.com###wbnn-left
+reborntrans.com###wbnn-right
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
 reborntrans.com##.manga-eagle-ad-widget-instance
 reborntrans.com##.widget-header-area
 reborntrans.com##.manga-eagle-ad-card
 reborntrans.com##.manga-eagle-ad-widget-ads-1
-reborntrans.com###wbnn-bottom
-reborntrans.com###wbnn-left
-reborntrans.com###wbnn-right
 reborntrans.com###manga_eagle_ad_widget-3
 reborntrans.com###manga_eagle_ad_widget-4
 reborntrans.com###manga_eagle_ad_widget-5
@@ -125,262 +704,206 @@ reborntrans.com###manga_eagle_ad_widget-21
 reborntrans.com###manga_eagle_ad_widget-22
 reborntrans.com###manga_eagle_ad_widget-30
 reborntrans.com###manga_eagle_ad_widget-35
-speed-manga.net##.dessert-frame
-speed-manga.net##.tt_bfx
-speed-manga.net##.tt_bfxl
-speed-manga.net##.tt_bfxr
-speed-manga.net##.tt_bfxb
-speed-manga.net###i8cqsek3wi7
-speed-manga.net##.mlb
-speed-manga.net##.kln
-speed-manga.net###c8029w01
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: rongyok.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+rongyok.com##[id^="content-modal-overlay"]
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+rongyok.com##[id^="loadingMessage"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+rongyok.com#%#//scriptlet('set-constant', 'isDisplayingContent', 'false')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: sing-manga.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
 sing-manga.com##.ads
 sing-manga.com##div[style*="text-align: center"][style*="margin: 30px 0px"]
 sing-manga.com##img[src*="image.cdend.com"]
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
 sing-manga.com##a[href*="ibit.ly"]
 sing-manga.com##a[href*="huaylike"]
 sing-manga.com##a[href*="lalikabet"]
 sing-manga.com##a[href*="1stgame"]
-black-manga.com##.center_blackmangaza
-black-manga.com##.center_blackmanga
-black-manga.com##.center_blackmangasolo
-black-manga.com##.center_blackmangafixsize
-black-manga.com###sticky-bottom
-black-manga.com###sticky-bottom2
-black-manga.com###sticky-bottom3
-black-manga.com##.mobile-float-right
-black-manga.com##.mobile-float-left
-black-manga.com##.floating_content
-black-manga.com##a[href^="/link_to.php"]
-reapertrans.com##.sort-ban a
-reapertrans.com##a[href*="ibit.ly"]
-reapertrans.com##div[id^="ads_"]
-nano-manga.com###block-5
-nano-manga.com###block-6
-nano-manga.com###sticky-ads-bottom
-nano-manga.com###sticky-ads-bottom2
-nano-manga.com###sticky-ads-bottom3
-nano-manga.com##a[href^="/link_to.php?url="]
-||nano-manga.com/link_to.php^
-fairyanime.net##.kosana-banner
-fairyanime.net##a:has(> img.kosana-banner)
-fairyanime.net##.adsbygoogle
-fairyanime.net##.ad-container
-fairyanime.net##.ad-banner
-fairyanime.net##.ads-container
-fairyanime.net##[id^="google_ads_iframe"]
-fairyanime.net##iframe[src*="doubleclick.net"]
-fairyanime.net##iframe[src*="googlesyndication.com"]
-fairyanime.net###floating-banner-container-left
-fairyanime.net##[id^="floating-banner-container"]
-||banner.tonytonychopper.com^$image,domain=fairyanime.net
-||premiumvertising.com^$domain=fairyanime.net
-||adsco.re^$domain=fairyanime.net
-fairyanime.net#%#//scriptlet('prevent-window-open')
-||ibit.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
-||cutt.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
-||rebrand.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
-||t.ly^$domain=fairyanime.net|streaming.tonytonychopper.com
-||cdend.com/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=streaming.tonytonychopper.com
-||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/hydra888.mp4$domain=streaming.tonytonychopper.com
-streaming.tonytonychopper.com##.overlay[id^="overlay-"]
-streaming.tonytonychopper.com##.overlay
-streaming.tonytonychopper.com##.skip-btn
-streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '#skip-0[onclick], #skip-1[onclick]', '', '', '', '120')
-||blockadsnot.com/uswds.min.js$script,domain=player.marimo.me
-||dnhfi5nn2dt67.cloudfront.net/bag.min.js$script,domain=player.marimo.me
-||ddrsemxv.com/s.js$script,domain=player.marimo.me
-||qvorcqfon.com/eidl.js$script,domain=player.marimo.me
-kingofshojo.com#%#//scriptlet('prevent-window-open')
-*$script,third-party,domain=kingofshojo.com
-*$subdocument,domain=kingofshojo.com
-kingofshojo.com##iframe
-kingofshojo.com##.adsbygoogle
-kingofshojo.com##[id^="google_ads"]
-kingofshojo.com##[id^="div-gpt-ad"]
-kingofshojo.com##.ad-container
-kingofshojo.com##.ad-wrapper
-kingofshojo.com##.advertisement
-goseries4k.com##.vipx-grid
-goseries4k.com##.vipx-item
-goseries4k.com##.list-ads
-goseries4k.com###pm-dessert
-goseries4k.com##.vipx-item--floating
-goseries4k.com##.action-hide
-goseries4k.com##aside#rightbar
-goseries4k.com#$#body { background-image: none !important; background-color: #151515 !important; }
-||goseries4k.com/wp-content/plugins/ads-vip/assets/css/vipx.min.css$stylesheet
-goseries4k.com#%#//scriptlet('prevent-window-open')
-25-hd.com,zmdb.net#%#//scriptlet('prevent-window-open')
-zmdb.net#%#//scriptlet('trusted-replace-node-text', 'script', 'aff5.mammoth88.cc', '"enabled":true,"queue"', '"enabled":false,"queue"')
-||aff5.mammoth88.cc^
-||media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenRjOW9pMzZmYXg3NWYyaWNhajZwdjI1YjF5aWllNGFrZHN6bDg1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dcLzmQAOrSW4K90Q2J/giphy.gif$image,domain=zmdb.net
-zmdb.net##.backdrop.svelte-1fmwwco
-zmdb.net##.gate.svelte-7egakv
-25-hd.com,zmdb.net##a[href^="https://aff5.mammoth88.cc/"]
-25-hd.com,zmdb.net##a[href^="http://aff5.mammoth88.cc/"]
-25-hd.com,zmdb.net##a[href^="//aff5.mammoth88.cc/"]
-||ibit.ly^$domain=25-hd.com|zmdb.net
-||t.ly^$domain=25-hd.com|zmdb.net
-||abm96.com^$domain=25-hd.com|zmdb.net
-||kamo99.com^$domain=25-hd.com|zmdb.net
-||regem.bet^$domain=25-hd.com|zmdb.net
-||ruayy.com^$domain=25-hd.com|zmdb.net
-||xn--365-1kl1e3c8a5a9q.fan^$domain=25-hd.com|zmdb.net
-25-hd.com##.main-banner
-25-hd.com##.sidebar-banner-left
-25-hd.com##.sidebar-banner-right
-25-hd.com##.banner-content-center
-25-hd.com##.banner-f-left-1
-25-hd.com##.banner-f-right-1
-25-hd.com##.banner-float
-25-hd.com##.player-promo-box
-25-hd.com##a[href*="ibit.ly"]
-25-hd.com##a[href*="t.ly"]
-25-hd.com##a[href*="abm96.com"]
-25-hd.com##a[href*="kamo99.com"]
-25-hd.com##a[href*="regem.bet"]
-25-hd.com##a[href*="ruayy.com"]
-25-hd.com##a[href*="xn--365-1kl1e3c8a5a9q.fan"]
-25-hd.com###primary > div.container-index > div.idx-st-content:first-child > div.content-category.article:first-child
-xn--l3c0azab5a2gta.com##.ads
-xn--l3c0azab5a2gta.com##.fb_iframe_widget
-xn--l3c0azab5a2gta.com##div#fb-root
-liquipedia.net###top-ad
-liquipedia.net###sidebar-ad
-liquipedia.net##.content-ad-block
-liquipedia.net##.content-ad
-liquipedia.net##.dropdown-betting-ad-button
-liquipedia.net##div[id^="div-gpt-ad"]
-xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
-xn--12cl7cd0bo9gf0s.com##a[href*="ambmax.pro"]
-xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
-||ambmax.pro^
-||superslot.asia^
-9nung.com##aside.adsnon-zone
-9nung.com##aside[aria-label="advertisement"]
-||9nung.com/wp-json/ads-non/$xhr,domain=9nung.com
-rongyok.com##[id^="content-modal-overlay"]
-rongyok.com##[id^="loadingMessage"]
-rongyok.com#%#//scriptlet('set-constant', 'isDisplayingContent', 'false')
-||movie911hd.com/ads/
-movie911hd.com##.cg-ad
-movie911hd.com###ui-xheader
-movie911hd.com###ui-xtop
-movie911hd.com###ui-xunder
-movie911hd.com###ui-xfooter
-movie911hd.com#%#//scriptlet('set-constant', 'bannerPopups', 'emptyArr')
-movie911hd.com#%#//scriptlet('set-constant', 'adSettings', 'emptyArr')
-movie911hd.com###banner_popup
-movie911hd.com###banner_backdrop
-movie911hd.com###video_overlay_a
-movie911hd.com##.signup_button
-||sv2.cdnbm168.xyz/media/ufagool.mp4$domain=movie911hd.com
-||sv2.cdnbm168.xyz/media/sexygame661.mp4$domain=movie911hd.com
-||sv2.cdnbm168.xyz/media/brazil9992.mp4$domain=movie911hd.com
-||sv2.cdnbm168.xyz/media/PGW441.mp4$domain=movie911hd.com
-||cleverwebserver.com^$domain=mawtoload.com
-||traffmovie.com^$domain=mawtoload.com
-||buddievidian.com^$domain=mawtoload.com
-||disleksiaindonesia.com^$domain=mawtoload.com
-mawtoload.com#%#//scriptlet('set-constant', 'dlInit', 'true')
-hubserieshds.com##.bannerrow
-hubserieshds.com###bt-ads
-hubserieshds.com###bt-ads-mini
-hubserieshds.com##iframe.bframe
-hubserieshds.com##a[href*="/go.php?u="]
-||hubserieshds.com/banner/
-||hubserieshds.com/bframe.php^
-nanoplayer.zip#%#//scriptlet('trusted-replace-node-text', 'script', 'goplayer({', '"ads":', '"disabledAds":')
-||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4
-||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4
-||nanoplayer.zip/video/supreme.mp4
-||nanoplayer.zip/video/we356.mp4
-||nanoplayer.zip/video/me356.mp4
-v8-hdmovie.com##.row-kodsana-container
-v8-hdmovie.com##.row-kodsana
-v8-hdmovie.com###ads-all
-v8-hdmovie.com###adLeft
-v8-hdmovie.com###adRight
-v8-hdmovie.com###adBottom
-v8-hdmovie.com##a[href*="ibit.ly"]:has(img)
-v8-hdmovie.com##a[href*="c301.cc"]:has(img)
-||ibit.ly^$domain=v8-hdmovie.com|stream1689.com
-||c301.cc^$domain=v8-hdmovie.com
-||stream1689.com/v4/js/stream1688/ads-popup.js$script
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: slow-manga.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+slow-manga.com##.header-ads-section
+slow-manga.com##img[src*="728x200"]
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+slow-manga.com##a[href*="ibit.ly"]
+slow-manga.com##a[href*="8xbet"]
+slow-manga.com##a[href*="lalika"]
+slow-manga.com##a[href*="sexy365bet"]
+slow-manga.com##a[href*="mahagame66"]
+slow-manga.com##a[href*="ufazeed"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: speed-manga.net
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+speed-manga.net##.tt_bfx
+speed-manga.net##.tt_bfxl
+speed-manga.net##.tt_bfxr
+speed-manga.net##.tt_bfxb
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+speed-manga.net##.dessert-frame
+speed-manga.net###i8cqsek3wi7
+speed-manga.net##.mlb
+speed-manga.net##.kln
+speed-manga.net###c8029w01
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: stream1689.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
 stream1689.com###adPopup
 stream1689.com###adCloseBtn
-stream1689.com##a[href*="ibit.ly/vip168sa"]
-stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', '"ads": [', '"disabledAds": [')
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||stream1689.com/v4/js/stream1688/ads-popup.js$script
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/lotto432.mp4$domain=stream1689.com
 ||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/panama888.mp4$domain=stream1689.com
-applejr.net##.library-ad
-||decreasestreet.com^$domain=applejr.net|applejr.xyz
-||gpcasla.org^$domain=applejr.net|applejr.xyz
-applejr.xyz###adsterra_section
-applejr.xyz###top_ads
-applejr.xyz###middle_ads2
-applejr.xyz##div[id^="container-1a8d25c81aed7c54407186d56a589c11"]
-||wingsmob.com^$domain=khoindvn.io.vn
-||dc9xwpjprguup.cloudfront.net^$domain=khoindvn.io.vn
-||portalfluently.com^$domain=khoindvn.io.vn
-||disleksiaindonesia.com^$domain=khoindvn.io.vn
-khoindvn.io.vn##a[href*="//disleksiaindonesia.com/"]
-khoindvn.io.vn##p:has(> a[href="https://muacert.com"])
-khoindvn.io.vn##a[href="https://muacert.com"]
-dunung24.com##figure:has(a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"]))
-dunung24.com##a:is([href*="ibit.ly/"],[href*="t.ly/"],[href*="upwin.me/"],[href*="the88top.com/"],[href*="wy88.bet/"],[href*="ck88.asia/"],[href*="888paruay.com/"],[href*="miracle55.net/"],[href*="123playx.com/"],[href*="bacara8.com/"],[href*="xn--72c7cj5azb7hk.com/"],[href*="ย่อลิ้ง.com/"])
-dunung24.com###ssip-popup
-||ibit.ly^$domain=dunung24.com
-||t.ly^$domain=dunung24.com
-||upwin.me^$domain=dunung24.com
-||the88top.com^$domain=dunung24.com
-||wy88.bet^$domain=dunung24.com
-||ck88.asia^$domain=dunung24.com
-||888paruay.com^$domain=dunung24.com
-||miracle55.net^$domain=dunung24.com
-||123playx.com^$domain=dunung24.com
-||bacara8.com^$domain=dunung24.com
-||xn--72c7cj5azb7hk.com^$domain=dunung24.com
-dunung24.com#%#//scriptlet('trusted-replace-node-text', 'script', 'jwpaFrame', 'function prepare(target){', 'function prepare(target){return;')
-||bacara8.com/sbogool2/$domain=dunung24.com
-||bacara8.com/sexy365/$domain=dunung24.com
-dunung24.com##.jwpa-video, .jwpa-start, .jwpa-skip, .jwpa-signup, .jwpa-count
-dunung24.com#$#.jwpa-box > .jwpa-frame { visibility: visible !important; }
-123-hda.com##p:has(> a[href^="https://ibit.ly/"] > img)
-123-hda.com##a[href^="https://ibit.ly/"]
-||123-hda.com/wp-content/uploads/*/728x*.gif$image
-123-hda.com,24playerhd.com#%#//scriptlet('prevent-window-open')
-abysscdn.com###overlay
-||decafeligiblyhad.com^$document
-||onlysubthai.com/ad-data/
-||onlysubthai.com/video/ufa11k.mp4
-onlysubthai.com##.banner-ads-layer
-onlysubthai.com##.banner-ads-close-all
-onlysubthai.com##a[href^="https://ibit.ly/"]
-onlysubthai.com##a[href^="https://cutt.ly/"]
-onlysubthai.com##a[href^="https://t.ly/"]
-||image.cdend.com/wp-content/uploads/2026/08/500x500-SBogool_popup.gif$domain=onlysubthai.com
-javwow.com,onlysubthai.com#%#//scriptlet('prevent-window-open')
-javwow.com##.banner-grid-container
-javwow.com##.banner-item
-javwow.com###ads_04
-javwow.com##a[href^="https://ibit.ly/"]
-javwow.com##a[href^="https://cutt.ly/"]
-javwow.com##a[href^="https://t.ly/"]
-javwow.com##a[href*="chokbet.now/"]
-javwow.com##a[href*="debetthailand.win/"]
-javwow.com##a[href*="poseidonbet-pos.com/"]
-javwow.com##a[href*="550ww.ing/"]
-javwow.com##a[href*="sexy456bet.com/"]
-javwow.com##a[href*=".webadorsite.com/"]
-||ibit.ly^$domain=javwow.com|onlysubthai.com
-||cutt.ly^$domain=javwow.com|onlysubthai.com
-||t.ly^$domain=javwow.com|onlysubthai.com
-||chokbet.now^$domain=javwow.com|onlysubthai.com
-||debetthailand.win^$domain=javwow.com|onlysubthai.com
-||poseidonbet-pos.com^$domain=javwow.com|onlysubthai.com
-||550ww.ing^$domain=javwow.com|onlysubthai.com
-||sexy456bet.com^$domain=javwow.com|onlysubthai.com
-||webadorsite.com^$domain=javwow.com|onlysubthai.com
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+stream1689.com##a[href*="ibit.ly/vip168sa"]
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+stream1689.com#%#//scriptlet('trusted-replace-node-text', 'script', 'atomic({', '"ads": [', '"disabledAds": [')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: streaming.tonytonychopper.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+streaming.tonytonychopper.com##.overlay[id^="overlay-"]
+streaming.tonytonychopper.com##.overlay
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||cdend.com/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/ufazeed.mp4$domain=streaming.tonytonychopper.com
+||googles.video/c2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1lc2FnYW1l/hydra888.mp4$domain=streaming.tonytonychopper.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+streaming.tonytonychopper.com##.skip-btn
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+streaming.tonytonychopper.com#%#//scriptlet('trusted-click-element', '#skip-0[onclick], #skip-1[onclick]', '', '', '', '120')
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: up-manga.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+up-manga.com###sticky-bottom
+up-manga.com###sticky-bottom2
+up-manga.com###sticky-bottom3
+up-manga.com##div[id^="sticky-bottom"]
+up-manga.com##.floating_content
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||up-manga.com/link_to.php^
+||ibit.ly^$domain=up-manga.com
+||t.ly^$domain=up-manga.com
+||cutt.ly^$domain=up-manga.com
+||tinyurl.com^$domain=up-manga.com
+||happylukepromos.com^$domain=up-manga.com
+||88livecasinohouse.com^$domain=up-manga.com
+||miracle55.net^$domain=up-manga.com
+||8x8win.tech^$domain=up-manga.com
+||kamo-99s.com^$domain=up-manga.com
+||funky99.biz^$domain=up-manga.com
+||crypto-thb.com^$domain=up-manga.com
+||goldenbrownbakery.com^$domain=up-manga.com
+||888paruay.com^$domain=up-manga.com
+||medyumseyfullahhoca.com^$domain=up-manga.com
+||tnfish.org^$domain=up-manga.com
+||xn--365-1kl1e3c8a5a9q.fan^$domain=up-manga.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+up-manga.com##.center_upmanga
+up-manga.com##.center_upmanga3
+up-manga.com##.center_upmangaza
+up-manga.com##.center_upmangaza3
+up-manga.com##.center_upmangasolo
+up-manga.com##.center_upmangasolo3
+
+! หมวด: พื้นหลังและรูปแบบการแสดงผล
+up-manga.com#$#body { background-image: none !important; background-color: #1a1a1a !important; }
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+up-manga.com##a[href^="/link_to.php"]
+up-manga.com##a[href*="ibit.ly"]
+up-manga.com##a[href*="cutt.ly"]
+up-manga.com##a[href*="pgk44"]
+up-manga.com##a[href*="ufabet"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: v8-hdmovie.com
+! ============================================================
+
+! หมวด: โฆษณาลอย ติดขอบจอ และชั้นซ้อนทับ
+v8-hdmovie.com###adLeft
+v8-hdmovie.com###adRight
+v8-hdmovie.com###adBottom
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||c301.cc^$domain=v8-hdmovie.com
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+v8-hdmovie.com##.row-kodsana-container
+v8-hdmovie.com##.row-kodsana
+v8-hdmovie.com###ads-all
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+v8-hdmovie.com##a[href*="ibit.ly"]:has(img)
+v8-hdmovie.com##a[href*="c301.cc"]:has(img)
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: xn--12cl7cd0bo9gf0s.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+xn--12cl7cd0bo9gf0s.com##.container > .row:has(> .col-12[align="center"] > a[rel="sponsored"])
+
+! หมวด: ลิงก์สปอนเซอร์และปุ่มโฆษณา
+xn--12cl7cd0bo9gf0s.com##a[href*="ambmax.pro"]
+xn--12cl7cd0bo9gf0s.com##a[href*="superslot.asia"]
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: xn--l3c0azab5a2gta.com
+! ============================================================
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+xn--l3c0azab5a2gta.com##.ads
+xn--l3c0azab5a2gta.com##.fb_iframe_widget
+xn--l3c0azab5a2gta.com##div#fb-root
+
+! ============================================================
+! เว็บไซต์ / ขอบเขต: zmdb.net
+! ============================================================
+
+! หมวด: บล็อกการโหลดโดเมน สื่อ และทรัพยากรโฆษณา
+||media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenRjOW9pMzZmYXg3NWYyaWNhajZwdjI1YjF5aWllNGFrZHN6bDg1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dcLzmQAOrSW4K90Q2J/giphy.gif$image,domain=zmdb.net
+
+! หมวด: แบนเนอร์และองค์ประกอบโฆษณาบนหน้าเว็บ
+zmdb.net##.backdrop.svelte-1fmwwco
+zmdb.net##.gate.svelte-7egakv
+
+! หมวด: สคริปต์ควบคุมป็อปอัป การแจ้งเตือน และพฤติกรรมโฆษณา
+zmdb.net#%#//scriptlet('trusted-replace-node-text', 'script', 'aff5.mammoth88.cc', '"enabled":true,"queue"', '"enabled":false,"queue"')
+
