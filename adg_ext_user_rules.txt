@@ -830,3 +830,54 @@ zmdb.net##.gate.svelte-7egakv
 zmdb.net##a[href^="https://aff5.mammoth88.cc/"], a[href^="http://aff5.mammoth88.cc/"], a[href^="//aff5.mammoth88.cc/"]
 zmdb.net#%#//scriptlet('prevent-window-open')
 zmdb.net#%#//scriptlet('trusted-replace-node-text', 'script', 'aff5.mammoth88.cc', '"enabled":true,"queue"', '"enabled":false,"queue"')
+
+! ========================================================
+! Dark-Manga.com Custom Adblock Rules
+! ========================================================
+
+! 1. ซ่อนแถบลอยด้านล่างและด้านข้างจอ (Sticky & Floating Banners)
+dark-manga.com###sticky-bottom
+dark-manga.com###sticky-bottom2
+dark-manga.com###sticky-bottom3
+dark-manga.com##.floating_content
+dark-manga.com##.sticky-close
+dark-manga.com##.sticky-bottom-inside
+dark-manga.com##.sticky-bottom2-inside
+dark-manga.com##.sticky-bottom3-inside
+dark-manga.com##.mobile-float-left
+dark-manga.com##.mobile-float-right
+
+! 2. ซ่อนกล่องแบนเนอร์โฆษณาทั้งหมดในหน้าเรื่องและหน้าอ่านตอน
+dark-manga.com##.center_darkmanga
+dark-manga.com##.center_darkmangaza
+
+! 3. กวาดล้างลิงก์โฆษณา/เว็บพนัน/ลิงก์ย่อทั้งหมดบนเว็บ
+dark-manga.com##a[href*="ibit.ly"]
+dark-manga.com##a[href*="t.ly/"]
+dark-manga.com##a[href*="cutly.ink"]
+dark-manga.com##a[href*="befunplay"]
+dark-manga.com##a[href*="lottovip"]
+dark-manga.com##a[href*="ambking"]
+dark-manga.com##a[href*="funky99"]
+dark-manga.com##a[href*="multeeshop"]
+dark-manga.com##a[href*="888paruay"]
+dark-manga.com##a[href*="miracle55"]
+dark-manga.com##a[href*="มั่นคง88"]
+dark-manga.com##a[href*="s.gy"]
+dark-manga.com##a[href*="xn--"]
+dark-manga.com##a[href*="edhdeportes.com"]
+
+! 4. บล็อกการดาวน์โหลดไฟล์ GIF โฆษณาที่ฝังไว้ (ประหยัดเน็ต + หน้าเว็บไม่กระตุก)
+! (รูปมังงะจริงใช้ฟอร์แมต .webp จึงปลอดภัย ไม่กระทบการอ่าน)
+||dark-manga.com/wp-content/uploads/*.gif$image,domain=dark-manga.com
+||dark-manga.com/wp-content/uploads/*banner*$image,domain=dark-manga.com
+||dark-manga.com/wp-content/uploads/*728x*$image,domain=dark-manga.com
+||dark-manga.com/wp-content/uploads/2025/11/close.png$image,domain=dark-manga.com
+
+! 5. บล็อกเครื่องเล่นวิดีโอโฆษณาแบบ Outstream / Video Ads อัตโนมัติ (เผื่อกรณีระบบสุ่มโฆษณา)
+dark-manga.com##div[class*="video-ad"]
+dark-manga.com##div[id*="video-ad"]
+dark-manga.com##div[class*="outstream"]
+dark-manga.com##iframe[src*="ad"]
+dark-manga.com#%#//scriptlet('prevent-popunder')
+dark-manga.com#%#//scriptlet('prevent-fetch', 'ad')
