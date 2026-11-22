@@ -881,3 +881,50 @@ dark-manga.com##div[class*="outstream"]
 dark-manga.com##iframe[src*="ad"]
 dark-manga.com#%#//scriptlet('prevent-popunder')
 dark-manga.com#%#//scriptlet('prevent-fetch', 'ad')
+
+! ========================================================
+! FWIP-TV.COM (Movie & Video Adblock Rules)
+! ========================================================
+
+! 1. บล็อกเซิร์ฟเวอร์คลิปวิดีโอโฆษณาและรูปแบนเนอร์ภายนอกทั้งหมด
+! (เมื่อบล็อกตัวนี้ สคริปต์ตัวเล่นจะ Error ทันที และ Skip ข้ามคลิปโฆษณาทั้งหมดไปเล่นหนังทันที)
+||ads-me.xyz^
+||googles.video^
+||image.cdend.com^
+
+! 2. สคริปต์ปลดล็อกปุ่ม Play และข้ามคลิปโฆษณาก่อนเล่นหนัง (Pre-roll Video Ads)
+fwip-tv.com#%#//scriptlet('click-element', '[data-player-ad-close]')
+fwip-tv.com#%#//scriptlet('remove-attr', 'disabled', '[data-player-play]')
+fwip-tv.com#%#//scriptlet('set-attr', '[data-player-preroll]', 'data-preroll-ads', '[]')
+fwip-tv.com#%#//scriptlet('prevent-fetch', 'movie_catalog_preroll_config')
+
+! 3. ซ่อนกรอบโฆษณาที่ปิดทับตัวเล่นวิดีโอและแถบโฆษณาข้างตัวเล่น
+fwip-tv.com##.movie-player__ad
+fwip-tv.com##.movie-player__side-ads
+fwip-tv.com##.movie-player__side-ad-column
+fwip-tv.com##[data-player-ad]
+fwip-tv.com##[data-player-side-ads]
+fwip-tv.com##[data-player-preroll]
+
+! 4. ซ่อนโฆษณาแบบลอยตามหน้าจอ (Floating Ads)
+fwip-tv.com###moive_pop
+fwip-tv.com###fix_pop
+fwip-tv.com##.movie-floating-ad
+fwip-tv.com##[data-floating-ad]
+fwip-tv.com##[data-floating-ad-content]
+
+! 5. ซ่อนแบนเนอร์โฆษณาทั้งหมดในหน้าเว็บ (ด้านบน ใต้ตัวเล่น และด้านล่าง)
+fwip-tv.com##.movie-ad
+fwip-tv.com###movie-ads-header
+
+! 6. กวาดล้างลิงก์เว็บพนัน/ลิงก์ย่อสปอนเซอร์ทั้งหมด
+fwip-tv.com##a[href*="ibit.ly"]
+fwip-tv.com##a[href*="cutt.ly"]
+fwip-tv.com##a[href*="t.ly/"]
+fwip-tv.com##a[href*="yut.red"]
+fwip-tv.com##a[href*="bit.ly"]
+fwip-tv.com##a[href*="chilltip.com"]
+
+! 7. ป้องกันการเด้งแท็บใหม่และ Pop-up กวนใจ
+fwip-tv.com#%#//scriptlet('prevent-popunder')
+fwip-tv.com#%#//scriptlet('prevent-window-open')
